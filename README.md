@@ -10,4 +10,3 @@ This repository contains various files such as
 * Brand colateral
 * Diagrams and images
 * Various other resources
-
