@@ -1,4 +1,4 @@
-[<img src="https://github.com/HonestInsurance/Resources/tree/master/branding/HIC_Logo_Vertical.png?raw=true" width="250">](https://www.honestinsurance.net)
+[<img src="https://github.com/HonestInsurance/Resources/blob/master/branding/HIC_Logo_Vertical.png?raw=true" width="200">](https://www.honestinsurance.net)
 
 -----------------------
 
@@ -7,6 +7,6 @@
 This repository contains various files such as
 * White paper
 * Research documents
-* Brand colateral
+* Brand collateral
 * Diagrams and images
 * Various other resources
