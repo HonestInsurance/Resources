@@ -1,4 +1,4 @@
-[<img src="https://github.com/HonestInsurance/Resources/blob/master/branding/HIC_Logo_Vertical.png?raw=true" width="200">](https://www.honestinsurance.net)
+[<img src="https://github.com/HonestInsurance/Resources/blob/master/branding/HIC_Logo_Vertical.png?raw=true" width="150">](https://www.honestinsurance.net)
 
 -----------------------
 
