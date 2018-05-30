@@ -765,7 +765,7 @@
         },
         {
           "_postman_id": "b508c184-86ae-a720-ce05-5d1ecdebf38d",
-          "name": "ProcessAccountCredit",
+          "name": "ProcessAccountCredit - Premium",
           "request": {
             "method": "POST",
             "header": [
