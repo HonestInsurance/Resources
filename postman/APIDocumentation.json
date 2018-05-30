@@ -450,7 +450,7 @@
               ]
             },
             "url": "{{url}}/ecosystem/setWcExpenses",
-            "description": "Configures the Exensens of the insurance pool ecosystem for the current day"
+            "description": "Configures the Expensens of the insurance pool ecosystem for the current day"
           },
           "response": []
         },
