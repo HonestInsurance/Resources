@@ -824,6 +824,62 @@
             "description": "Creates a bond within the specified pool"
           },
           "response": []
+        },
+        {
+          "_postman_id": "cc907585-d0b6-4780-a1c7-9ed4ff5f3058",
+          "name": "ProcessAccountCredit Copy",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "ContractAdr",
+                  "value": "{{ContractAdr}}",
+                  "type": "text"
+                },
+                {
+                  "key": "SigningPrivateKey",
+                  "value": "{{PrivKey_Ecosystem}}",
+                  "type": "text"
+                },
+                {
+                  "key": "BankTransactionIdx",
+                  "value": "36",
+                  "type": "text"
+                },
+                {
+                  "key": "AccountType",
+                  "value": "{{BondAccount}}",
+                  "type": "text"
+                },
+                {
+                  "key": "PaymentAccountHashSender",
+                  "value": "0x9701a3e1840f59635c219124a5166d8eb2dfd539967f3c80e19f75e48f7df1fc",
+                  "type": "text"
+                },
+                {
+                  "key": "PaymentSubject",
+                  "value": "17681",
+                  "type": "text"
+                },
+                {
+                  "key": "CreditAmount",
+                  "value": "23477",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{url}}/bank/processaccountcredit",
+            "description": "Creates a bond within the specified pool"
+          },
+          "response": []
         }
       ]
     },
