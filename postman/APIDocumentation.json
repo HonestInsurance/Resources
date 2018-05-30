@@ -847,31 +847,37 @@
                 {
                   "key": "SigningPrivateKey",
                   "value": "{{PrivKey_Ecosystem}}",
+                  "description": "",
                   "type": "text"
                 },
                 {
                   "key": "BankTransactionIdx",
                   "value": "36",
+                  "description": "",
                   "type": "text"
                 },
                 {
                   "key": "AccountType",
-                  "value": "{{BondAccount}}",
+                  "value": "{{FundingAccount}}",
+                  "description": "",
                   "type": "text"
                 },
                 {
                   "key": "PaymentAccountHashSender",
                   "value": "0x9701a3e1840f59635c219124a5166d8eb2dfd539967f3c80e19f75e48f7df1fc",
+                  "description": "",
                   "type": "text"
                 },
                 {
                   "key": "PaymentSubject",
                   "value": "17681",
+                  "description": "",
                   "type": "text"
                 },
                 {
                   "key": "CreditAmount",
                   "value": "23477",
+                  "description": "",
                   "type": "text"
                 }
               ]
