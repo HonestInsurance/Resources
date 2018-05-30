@@ -746,13 +746,13 @@
                 },
                 {
                   "key": "AdviceIdx",
-                  "value": "0",
+                  "value": "3",
                   "description": "",
                   "type": "text"
                 },
                 {
                   "key": "BankTransactionIdx",
-                  "value": "35",
+                  "value": "39",
                   "description": "",
                   "type": "text"
                 }
