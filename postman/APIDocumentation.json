@@ -1116,6 +1116,39 @@
           "response": []
         },
         {
+          "_postman_id": "d689051c-1519-4f56-8767-ee9d056627b4",
+          "name": "GetBondLogs Copy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "{{url}}/bond/logs?ContractAdr={{ContractAdr}}",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "bond",
+                "logs"
+              ],
+              "query": [
+                {
+                  "key": "ContractAdr",
+                  "value": "{{ContractAdr}}",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Returns the details for the requested Bond"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "cad35c30-7cd0-844b-2cac-ba66d9d15c6e",
           "name": "CreateBond",
           "request": {
@@ -1156,39 +1189,6 @@
             },
             "url": "{{url}}/bond",
             "description": "Creates a bond within the specified pool"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "d689051c-1519-4f56-8767-ee9d056627b4",
-          "name": "GetBondLogs Copy",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "{{url}}/bond/logs?ContractAdr={{ContractAdr}}",
-              "host": [
-                "{{url}}"
-              ],
-              "path": [
-                "bond",
-                "logs"
-              ],
-              "query": [
-                {
-                  "key": "ContractAdr",
-                  "value": "{{ContractAdr}}",
-                  "equals": true
-                }
-              ]
-            },
-            "description": "Returns the details for the requested Bond"
           },
           "response": []
         }
