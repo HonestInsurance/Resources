@@ -794,7 +794,7 @@
               ]
             },
             "url": "{{url}}/adjustor/retire",
-            "description": "Updates an adjustor. Only the trust can update an adjustor's details"
+            "description": "Retires an adjustor. Only the trust can perform this operation"
           },
           "response": []
         }
