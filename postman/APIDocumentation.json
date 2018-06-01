@@ -828,7 +828,8 @@
                   "equals": true
                 }
               ]
-            }
+            },
+            "description": "Returns a list of all outstanding bank payment advice waiting to be processed"
           },
           "response": []
         },
