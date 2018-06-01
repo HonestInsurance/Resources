@@ -1512,16 +1512,18 @@
                 {
                   "key": "SigningPrivateKey",
                   "value": "{{PrivKey_Policy}}",
+                  "description": "",
                   "type": "text"
                 },
                 {
                   "key": "PolicyHash",
                   "value": "",
+                  "description": "",
                   "type": "text"
                 }
               ]
             },
-            "url": "{{url}}/adjustor/suspend",
+            "url": "{{url}}/adjustor/unsuspend",
             "description": "Allows the policy holder to temporarily suspend a policy"
           },
           "response": []
