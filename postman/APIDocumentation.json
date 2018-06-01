@@ -605,7 +605,7 @@
                 }
               ]
             },
-            "description": "Returns a list of adjustors in decending order (latest are at the beginning)"
+            "description": "Returns a list of adjustors in decending order"
           },
           "response": []
         },
