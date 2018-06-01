@@ -764,6 +764,39 @@
             "description": "Updates an adjustor. Only the trust can update an adjustor's details"
           },
           "response": []
+        },
+        {
+          "_postman_id": "d689051c-1519-4f56-8767-ee9d056627b4",
+          "name": "GetBondLogs Copy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "{{url}}/bond/logs?ContractAdr={{ContractAdr}}",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "bond",
+                "logs"
+              ],
+              "query": [
+                {
+                  "key": "ContractAdr",
+                  "value": "{{ContractAdr}}",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Returns the details for the requested Bond"
+          },
+          "response": []
         }
       ]
     },
@@ -1085,39 +1118,6 @@
         {
           "_postman_id": "a9326a33-5c63-1630-334c-32c0ce79f958",
           "name": "GetBondLogs",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "{{url}}/bond/logs?ContractAdr={{ContractAdr}}",
-              "host": [
-                "{{url}}"
-              ],
-              "path": [
-                "bond",
-                "logs"
-              ],
-              "query": [
-                {
-                  "key": "ContractAdr",
-                  "value": "{{ContractAdr}}",
-                  "equals": true
-                }
-              ]
-            },
-            "description": "Returns the details for the requested Bond"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "d689051c-1519-4f56-8767-ee9d056627b4",
-          "name": "GetBondLogs Copy",
           "request": {
             "method": "GET",
             "header": [
