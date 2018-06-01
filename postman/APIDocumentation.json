@@ -694,6 +694,43 @@
             "description": "Updates an adjustor. Only the trust can update an adjustor's details"
           },
           "response": []
+        },
+        {
+          "_postman_id": "d7d51c3a-1e49-4068-a58e-a03c497582f9",
+          "name": "GetBond Copy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "{{url}}/bond?ContractAdr={{ContractAdr}}&Idx=1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "bond"
+              ],
+              "query": [
+                {
+                  "key": "ContractAdr",
+                  "value": "{{ContractAdr}}",
+                  "equals": true
+                },
+                {
+                  "key": "Idx",
+                  "value": "1",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Returns the details for the requested Bond"
+          },
+          "response": []
         }
       ]
     },
@@ -945,43 +982,6 @@
         {
           "_postman_id": "d6f7e66a-de7a-5ec8-bab9-464c0f323629",
           "name": "GetBond",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "{{url}}/bond?ContractAdr={{ContractAdr}}&Idx=1",
-              "host": [
-                "{{url}}"
-              ],
-              "path": [
-                "bond"
-              ],
-              "query": [
-                {
-                  "key": "ContractAdr",
-                  "value": "{{ContractAdr}}",
-                  "equals": true
-                },
-                {
-                  "key": "Idx",
-                  "value": "1",
-                  "equals": true
-                }
-              ]
-            },
-            "description": "Returns the details for the requested Bond"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "d7d51c3a-1e49-4068-a58e-a03c497582f9",
-          "name": "GetBond Copy",
           "request": {
             "method": "GET",
             "header": [
