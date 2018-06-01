@@ -1840,7 +1840,7 @@
               ]
             },
             "url": "{{url}}/settlement/amount",
-            "description": "Creates a bond within the specified pool"
+            "description": "Updates the expected settlement amount for an open and active settlement. This operation can only be performed by an adjustor"
           },
           "response": []
         }
