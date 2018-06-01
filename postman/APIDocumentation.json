@@ -622,12 +622,12 @@
             ],
             "body": {},
             "url": {
-              "raw": "{{url}}/bond/logs?ContractAdr={{ContractAdr}}",
+              "raw": "{{url}}/adjustor/logs?ContractAdr={{ContractAdr}}",
               "host": [
                 "{{url}}"
               ],
               "path": [
-                "bond",
+                "adjustor",
                 "logs"
               ],
               "query": [
