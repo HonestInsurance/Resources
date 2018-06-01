@@ -1484,7 +1484,7 @@
               ]
             },
             "url": "{{url}}/adjustor/retire",
-            "description": "Allows the policy holder to permanently retire this policy"
+            "description": "Allows the policy holder to temporarily suspend a policy"
           },
           "response": []
         }
