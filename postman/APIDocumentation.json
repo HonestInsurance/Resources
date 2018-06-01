@@ -611,7 +611,7 @@
         },
         {
           "_postman_id": "d689051c-1519-4f56-8767-ee9d056627b4",
-          "name": "GetBondLogs Copy",
+          "name": "GetAdjustorLogs",
           "request": {
             "method": "GET",
             "header": [
