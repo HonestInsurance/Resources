@@ -1390,8 +1390,8 @@
                   "type": "text"
                 },
                 {
-                  "key": "Owner",
-                  "value": "{{PubKey_Policy}}",
+                  "key": "PolicyHash",
+                  "value": "",
                   "description": "",
                   "type": "text"
                 },
