@@ -1790,7 +1790,7 @@
               ]
             },
             "url": "{{url}}/settlement/close",
-            "description": "Creates a bond within the specified pool"
+            "description": "Closes an open settlement. This operation can only be performed by an adjustor"
           },
           "response": []
         },
