@@ -591,7 +591,7 @@
               ]
             },
             "url": "{{url}}/adjustor",
-            "description": "Creates a bond within the specified pool"
+            "description": "Creates an adjustor within the specified pool"
           },
           "response": []
         },
