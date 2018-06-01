@@ -1454,7 +1454,7 @@
         },
         {
           "_postman_id": "6e158751-0e83-42e8-8207-a1ed3189f8bd",
-          "name": "RetirePolicy Copy",
+          "name": "SuspendPolicy",
           "request": {
             "method": "PUT",
             "header": [
