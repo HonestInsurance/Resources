@@ -1684,7 +1684,7 @@
               ]
             },
             "url": "{{url}}/settlement",
-            "description": "Creates a bond within the specified pool"
+            "description": "Creates a settlement within the specified pool ecosystem"
           },
           "response": []
         },
