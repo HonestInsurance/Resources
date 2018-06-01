@@ -852,7 +852,7 @@
                 },
                 {
                   "key": "BankTransactionIdx",
-                  "value": "40",
+                  "value": "45",
                   "description": "",
                   "type": "text"
                 },
@@ -870,13 +870,13 @@
                 },
                 {
                   "key": "PaymentSubject",
-                  "value": "17681",
+                  "value": "17682",
                   "description": "",
                   "type": "text"
                 },
                 {
                   "key": "CreditAmount",
-                  "value": "17848",
+                  "value": "23477",
                   "description": "",
                   "type": "text"
                 }
