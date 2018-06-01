@@ -1684,7 +1684,7 @@
               ]
             },
             "url": "{{url}}/settlement",
-            "description": "Creates a settlement within the specified pool ecosystem"
+            "description": "Creates a settlement within the specified pool ecosystem. This operation can only be performed by an adjustor"
           },
           "response": []
         },
