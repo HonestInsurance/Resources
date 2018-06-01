@@ -397,7 +397,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "{{url}}/timer/notifications?ContractAdr={{ContractAdr}}",
+              "raw": "{{url}}/timer/notifications?ContractAdr={{ContractAdr}}&FromTime=1527822998&ToTime=1527866998",
               "host": [
                 "{{url}}"
               ],
@@ -409,6 +409,16 @@
                 {
                   "key": "ContractAdr",
                   "value": "{{ContractAdr}}",
+                  "equals": true
+                },
+                {
+                  "key": "FromTime",
+                  "value": "1527822998",
+                  "equals": true
+                },
+                {
+                  "key": "ToTime",
+                  "value": "1527866998",
                   "equals": true
                 }
               ]
