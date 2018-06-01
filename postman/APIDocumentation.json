@@ -1739,6 +1739,56 @@
           "response": []
         },
         {
+          "_postman_id": "b9d08706-347e-f642-67d4-33499caef582",
+          "name": "SetExpectedAmount",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "ContractAdr",
+                  "value": "{{ContractAdr}}",
+                  "type": "text"
+                },
+                {
+                  "key": "SigningPrivateKey",
+                  "value": "{{PrivKey_Adjustor}}",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "SettlementHash",
+                  "value": "0x50aa3b02189413d209902b6b3d674d4fc5136186b8b9273f7a4ce5bb45b3165b",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "AdjustorHash",
+                  "value": "0xf646c10ed48dc202e733c213eed59d474ff7399ad4190acc4186350ff285ad4f",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "ExpectedSettlementAmount",
+                  "value": "450000",
+                  "description": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{url}}/settlement/amount",
+            "description": "Updates the expected settlement amount for an open and active settlement. This operation can only be performed by an adjustor"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "b00de277-8b73-1d7b-d294-96a322ee993b",
           "name": "CloseSettlement",
           "request": {
@@ -1791,56 +1841,6 @@
             },
             "url": "{{url}}/settlement/close",
             "description": "Closes an open settlement. This operation can only be performed by an adjustor"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "b9d08706-347e-f642-67d4-33499caef582",
-          "name": "SetExpectedAmount",
-          "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "ContractAdr",
-                  "value": "{{ContractAdr}}",
-                  "type": "text"
-                },
-                {
-                  "key": "SigningPrivateKey",
-                  "value": "{{PrivKey_Adjustor}}",
-                  "description": "",
-                  "type": "text"
-                },
-                {
-                  "key": "SettlementHash",
-                  "value": "0x50aa3b02189413d209902b6b3d674d4fc5136186b8b9273f7a4ce5bb45b3165b",
-                  "description": "",
-                  "type": "text"
-                },
-                {
-                  "key": "AdjustorHash",
-                  "value": "0xf646c10ed48dc202e733c213eed59d474ff7399ad4190acc4186350ff285ad4f",
-                  "description": "",
-                  "type": "text"
-                },
-                {
-                  "key": "ExpectedSettlementAmount",
-                  "value": "450000",
-                  "description": "",
-                  "type": "text"
-                }
-              ]
-            },
-            "url": "{{url}}/settlement/amount",
-            "description": "Updates the expected settlement amount for an open and active settlement. This operation can only be performed by an adjustor"
           },
           "response": []
         }
