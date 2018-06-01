@@ -1474,16 +1474,18 @@
                 {
                   "key": "SigningPrivateKey",
                   "value": "{{PrivKey_Policy}}",
+                  "description": "",
                   "type": "text"
                 },
                 {
                   "key": "PolicyHash",
                   "value": "",
+                  "description": "",
                   "type": "text"
                 }
               ]
             },
-            "url": "{{url}}/adjustor/retire",
+            "url": "{{url}}/adjustor/suspend",
             "description": "Allows the policy holder to temporarily suspend a policy"
           },
           "response": []
