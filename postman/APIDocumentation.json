@@ -1734,7 +1734,7 @@
               ]
             },
             "url": "{{url}}/settlement/addinfo",
-            "description": "Creates a bond within the specified pool"
+            "description": "Add additional information to a settlement. This operation can only be performed by an adjustor"
           },
           "response": []
         },
