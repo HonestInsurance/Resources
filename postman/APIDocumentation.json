@@ -1035,7 +1035,7 @@
               ]
             },
             "url": "{{url}}/bank/processaccountcredit",
-            "description": "Creates a bond within the specified pool"
+            "description": "Confirms a payment (credit) has been received at one of the bank accounts (Premium, Bond or Funding)"
           },
           "response": []
         }
