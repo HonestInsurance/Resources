@@ -541,7 +541,7 @@
       "item": [
         {
           "_postman_id": "d7d51c3a-1e49-4068-a58e-a03c497582f9",
-          "name": "GetAdjusotr",
+          "name": "GetAdjustor",
           "request": {
             "method": "GET",
             "header": [
