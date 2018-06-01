@@ -797,6 +797,62 @@
             "description": "Retires an adjustor. Only the trust can perform this operation"
           },
           "response": []
+        },
+        {
+          "_postman_id": "21bf5ee0-adb7-4644-8aaa-fcb6728ea282",
+          "name": "UpdateAdjustor Copy",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "ContractAdr",
+                  "value": "{{ContractAdr}}",
+                  "type": "text"
+                },
+                {
+                  "key": "SigningPrivateKey",
+                  "value": "{{PrivKey_Ecosystem}}",
+                  "type": "text"
+                },
+                {
+                  "key": "AdjustorHash",
+                  "value": "0xf646c10ed48dc202e733c213eed59d474ff7399ad4190acc4186350ff285ad4f",
+                  "type": "text"
+                },
+                {
+                  "key": "Owner",
+                  "value": "{{PubKey_Adjustor}}",
+                  "type": "text"
+                },
+                {
+                  "key": "SettlementApprovalAmount",
+                  "value": "35000000",
+                  "type": "text"
+                },
+                {
+                  "key": "PolicyRiskPointLimit",
+                  "value": "3000",
+                  "type": "text"
+                },
+                {
+                  "key": "ServiceAgreementHash",
+                  "value": "0xa1b928170d460b7876b96acea30f9c3d214dd89f31aef9db4312355f9be518ba",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{url}}/adjustor",
+            "description": "Updates an adjustor. Only the trust can update an adjustor's details"
+          },
+          "response": []
         }
       ]
     },
