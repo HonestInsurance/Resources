@@ -1485,7 +1485,7 @@
                 }
               ]
             },
-            "url": "{{url}}/adjustor/suspend",
+            "url": "{{url}}/policy/suspend",
             "description": "Allows the policy holder to temporarily suspend a policy"
           },
           "response": []
