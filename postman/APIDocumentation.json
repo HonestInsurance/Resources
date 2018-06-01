@@ -1410,7 +1410,7 @@
               ]
             },
             "url": "{{url}}/policy",
-            "description": "Creates a policy within the specified pool ecosystem. Only adjustors can perform this operation"
+            "description": "Updates an existing policy. Only adjustors can perform this operation"
           },
           "response": []
         },
