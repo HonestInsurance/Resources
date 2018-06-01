@@ -552,12 +552,12 @@
             ],
             "body": {},
             "url": {
-              "raw": "{{url}}/bond?ContractAdr={{ContractAdr}}&Idx=1",
+              "raw": "{{url}}/adjustor?ContractAdr={{ContractAdr}}&Idx=1",
               "host": [
                 "{{url}}"
               ],
               "path": [
-                "bond"
+                "adjustor"
               ],
               "query": [
                 {
