@@ -1360,7 +1360,7 @@
         },
         {
           "_postman_id": "34eca37a-cdcf-4e4e-aea0-db8354c25794",
-          "name": "CreatePolicy Copy",
+          "name": "UpdatePolicy",
           "request": {
             "method": "PUT",
             "header": [
