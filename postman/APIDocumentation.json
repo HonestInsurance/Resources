@@ -659,7 +659,7 @@
         },
         {
           "_postman_id": "2f8f61ba-e62a-428f-94f7-2b7cd76804b5",
-          "name": "UpdateAdjustor Copy",
+          "name": "RetireAdjustor",
           "request": {
             "method": "PUT",
             "header": [
