@@ -281,7 +281,7 @@
                 }
               ]
             },
-            "description": "Returns the constants that are being used within the insurance pool"
+            "description": "Returns the constants that are being used within the insurance pool ecosystem"
           },
           "response": []
         },
