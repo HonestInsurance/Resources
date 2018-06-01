@@ -1298,7 +1298,7 @@
                 }
               ]
             },
-            "description": "Returns the details for the requested Bond"
+            "description": "Returns a list of policy event logs matching the provided search criteria"
           },
           "response": []
         },
