@@ -853,6 +853,42 @@
             "description": "Retires an adjustor. Only the trust can perform this operation"
           },
           "response": []
+        },
+        {
+          "_postman_id": "34c5119a-4b2f-4e65-8ebb-d2c8ab91a16e",
+          "name": "RetireAdjustor Copy",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "ContractAdr",
+                  "value": "{{ContractAdr}}",
+                  "type": "text"
+                },
+                {
+                  "key": "SigningPrivateKey",
+                  "value": "{{PrivKey_Ecosystem}}",
+                  "type": "text"
+                },
+                {
+                  "key": "AdjustorHash",
+                  "value": "0xf646c10ed48dc202e733c213eed59d474ff7399ad4190acc4186350ff285ad4f",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{url}}/adjustor/retire",
+            "description": "Retires an adjustor. Only the trust can perform this operation"
+          },
+          "response": []
         }
       ]
     },
