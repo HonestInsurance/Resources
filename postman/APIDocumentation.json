@@ -1448,7 +1448,7 @@
               ]
             },
             "url": "{{url}}/adjustor/retire",
-            "description": "Retires an adjustor. Only the trust can perform this operation"
+            "description": "Allows the policy holder to permanently retire this policy"
           },
           "response": []
         }
