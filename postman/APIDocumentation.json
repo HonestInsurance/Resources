@@ -1354,7 +1354,7 @@
               ]
             },
             "url": "{{url}}/policy",
-            "description": "Creates a bond within the specified pool"
+            "description": "Creates a policy within the specified pool ecosystem. Only adjustors can perform this operation"
           },
           "response": []
         }
