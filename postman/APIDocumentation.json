@@ -1492,7 +1492,7 @@
         },
         {
           "_postman_id": "77284d56-ed29-4bfe-8816-a485e724820e",
-          "name": "SuspendPolicy Copy",
+          "name": "UnsuspendPolicy",
           "request": {
             "method": "PUT",
             "header": [
