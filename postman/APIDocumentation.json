@@ -1415,44 +1415,6 @@
           "response": []
         },
         {
-          "_postman_id": "34c5119a-4b2f-4e65-8ebb-d2c8ab91a16e",
-          "name": "RetirePolicy",
-          "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "ContractAdr",
-                  "value": "{{ContractAdr}}",
-                  "type": "text"
-                },
-                {
-                  "key": "SigningPrivateKey",
-                  "value": "{{PrivKey_Policy}}",
-                  "description": "",
-                  "type": "text"
-                },
-                {
-                  "key": "PolicyHash",
-                  "value": "",
-                  "description": "",
-                  "type": "text"
-                }
-              ]
-            },
-            "url": "{{url}}/policy/retire",
-            "description": "Allows the policy holder to permanently retire this policy"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "6e158751-0e83-42e8-8207-a1ed3189f8bd",
           "name": "SuspendPolicy",
           "request": {
@@ -1487,6 +1449,44 @@
             },
             "url": "{{url}}/policy/suspend",
             "description": "Allows the policy holder to temporarily suspend a policy"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "34c5119a-4b2f-4e65-8ebb-d2c8ab91a16e",
+          "name": "RetirePolicy",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "ContractAdr",
+                  "value": "{{ContractAdr}}",
+                  "type": "text"
+                },
+                {
+                  "key": "SigningPrivateKey",
+                  "value": "{{PrivKey_Policy}}",
+                  "description": "",
+                  "type": "text"
+                },
+                {
+                  "key": "PolicyHash",
+                  "value": "",
+                  "description": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{url}}/policy/retire",
+            "description": "Allows the policy holder to permanently retire this policy"
           },
           "response": []
         },
