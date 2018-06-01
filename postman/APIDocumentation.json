@@ -1489,6 +1489,42 @@
             "description": "Allows the policy holder to temporarily suspend a policy"
           },
           "response": []
+        },
+        {
+          "_postman_id": "77284d56-ed29-4bfe-8816-a485e724820e",
+          "name": "SuspendPolicy Copy",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "ContractAdr",
+                  "value": "{{ContractAdr}}",
+                  "type": "text"
+                },
+                {
+                  "key": "SigningPrivateKey",
+                  "value": "{{PrivKey_Policy}}",
+                  "type": "text"
+                },
+                {
+                  "key": "PolicyHash",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": "{{url}}/adjustor/suspend",
+            "description": "Allows the policy holder to temporarily suspend a policy"
+          },
+          "response": []
         }
       ]
     },
