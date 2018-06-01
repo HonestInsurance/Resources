@@ -1360,7 +1360,7 @@
         },
         {
           "_postman_id": "21bf5ee0-adb7-4644-8aaa-fcb6728ea282",
-          "name": "UpdateAdjustor Copy",
+          "name": "UpdatePolicy",
           "request": {
             "method": "PUT",
             "header": [
