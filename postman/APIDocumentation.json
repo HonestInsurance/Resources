@@ -1524,7 +1524,7 @@
               ]
             },
             "url": "{{url}}/policy/unsuspend",
-            "description": "Allows the policy holder to temporarily suspend a policy"
+            "description": "Allows the policy holder to unsuspend a policy if it is in a suspended state"
           },
           "response": []
         }
