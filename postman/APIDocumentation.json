@@ -1435,7 +1435,7 @@
                 },
                 {
                   "key": "SigningPrivateKey",
-                  "value": "{{PrivKey_Ecosystem}}",
+                  "value": "{{PrivKey_Policy}}",
                   "description": "",
                   "type": "text"
                 },
