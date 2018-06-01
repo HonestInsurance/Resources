@@ -578,7 +578,7 @@
         },
         {
           "_postman_id": "5464fcca-e13e-4c62-a8c3-dcb8dccbee7b",
-          "name": "GetBondList Copy",
+          "name": "GetAdjustorList",
           "request": {
             "method": "GET",
             "header": [
