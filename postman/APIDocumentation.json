@@ -653,7 +653,7 @@
               ]
             },
             "url": "{{url}}/adjustor",
-            "description": "Creates a bond within the specified pool"
+            "description": "Updates an adjustor. Only the trust can update an adjustor's details"
           },
           "response": []
         }
