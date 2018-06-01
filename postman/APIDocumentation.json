@@ -1447,7 +1447,7 @@
                 }
               ]
             },
-            "url": "{{url}}/adjustor/retire",
+            "url": "{{url}}/policy/retire",
             "description": "Allows the policy holder to permanently retire this policy"
           },
           "response": []
