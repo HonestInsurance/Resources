@@ -577,6 +577,39 @@
           "response": []
         },
         {
+          "_postman_id": "5464fcca-e13e-4c62-a8c3-dcb8dccbee7b",
+          "name": "GetBondList Copy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "{{url}}/bond/list?ContractAdr={{ContractAdr}}",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "bond",
+                "list"
+              ],
+              "query": [
+                {
+                  "key": "ContractAdr",
+                  "value": "{{ContractAdr}}",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "Returns the details for the requested Bond"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "2bcdbc68-65a2-d1a0-ea45-ab111544f6ba",
           "name": "CreateAdjustor",
           "request": {
@@ -729,39 +762,6 @@
             },
             "url": "{{url}}/adjustor/retire",
             "description": "Updates an adjustor. Only the trust can update an adjustor's details"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "5464fcca-e13e-4c62-a8c3-dcb8dccbee7b",
-          "name": "GetBondList Copy",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "{{url}}/bond/list?ContractAdr={{ContractAdr}}",
-              "host": [
-                "{{url}}"
-              ],
-              "path": [
-                "bond",
-                "list"
-              ],
-              "query": [
-                {
-                  "key": "ContractAdr",
-                  "value": "{{ContractAdr}}",
-                  "equals": true
-                }
-              ]
-            },
-            "description": "Returns the details for the requested Bond"
           },
           "response": []
         }
