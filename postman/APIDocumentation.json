@@ -1212,7 +1212,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "{{url}}/policy?ContractAdr={{ContractAdr}}&Idx=4",
+              "raw": "{{url}}/policy?ContractAdr={{ContractAdr}}&Idx=1",
               "host": [
                 "{{url}}"
               ],
@@ -1227,7 +1227,7 @@
                 },
                 {
                   "key": "Idx",
-                  "value": "4",
+                  "value": "1",
                   "equals": true
                 }
               ]
