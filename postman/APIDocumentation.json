@@ -1004,7 +1004,7 @@
                 },
                 {
                   "key": "BankTransactionIdx",
-                  "value": "55",
+                  "value": "68",
                   "description": "",
                   "type": "text"
                 },
@@ -1022,7 +1022,7 @@
                 },
                 {
                   "key": "PaymentSubject",
-                  "value": "17683",
+                  "value": "17684",
                   "description": "",
                   "type": "text"
                 },
