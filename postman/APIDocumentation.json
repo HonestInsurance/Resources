@@ -898,13 +898,13 @@
                 },
                 {
                   "key": "AdviceIdx",
-                  "value": "6",
+                  "value": "1",
                   "description": "",
                   "type": "text"
                 },
                 {
                   "key": "BankTransactionIdx",
-                  "value": "66",
+                  "value": "70",
                   "description": "",
                   "type": "text"
                 }
