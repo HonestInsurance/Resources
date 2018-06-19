@@ -743,7 +743,7 @@
                 },
                 {
                   "key": "PolicyRiskPointLimit",
-                  "value": "3000",
+                  "value": "3500",
                   "description": "",
                   "type": "text"
                 },
