@@ -130,7 +130,7 @@
               "formdata": [
                 {
                   "key": "SigningPrivateKey",
-                  "value": "{{PrivKey_Ecosystem}}",
+                  "value": "158f335e04917344ba5010368c1ab8570391a9672272909fed8175e7bbe23eae",
                   "description": "",
                   "type": "text"
                 },
