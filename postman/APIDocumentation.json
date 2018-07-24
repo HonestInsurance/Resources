@@ -737,13 +737,13 @@
                 },
                 {
                   "key": "SettlementApprovalAmount",
-                  "value": "44000000",
+                  "value": "44000004",
                   "description": "",
                   "type": "text"
                 },
                 {
                   "key": "PolicyRiskPointLimit",
-                  "value": "5300",
+                  "value": "5302",
                   "description": "",
                   "type": "text"
                 },
