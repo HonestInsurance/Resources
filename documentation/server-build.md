@@ -319,7 +319,7 @@ Test the automatic reneal feature of certbot:
 
 # 6 - Server: api-node-01 - Deploy API dotnet core package to server remotely
 
-The below script needs to be run on the machine on whitch the development of the api service is commencing and has the .NET CORE SDK installed.
+The below script needs to be run on the machine on which the development of the api service is commencing.
 
 `$ sudo vi /usr/local/bin/deploy`
 
@@ -367,7 +367,7 @@ The file `ApiService/config/config.json` contains the configuration parameters o
 
 ## 7.1 Install Nginx
 
-Follow the steps as outlined in **4.1 Install Nginx** and specify the below configuration file:
+Follow the steps as [outlined above](#41-install-nginx) and specify the below configuration file:
 
 `$ sudo vi /etc/nginx/sites-available/default`
 
@@ -391,7 +391,7 @@ server {
 
 ## 7.2 Install SSL certificates
 
-Follow the steps as outlined for **5 - Server: api-node-01 - Install SSL certificates ...** by using the earlier configured nginx configuration file.
+Follow the steps as [outlined above](#5---server-api-node-01---install-ssl-certificates-on-ubuntu-server-using-certbot) by using the earlier configured nginx configuration file.
 
 -----------------------
 
