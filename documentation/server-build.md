@@ -424,7 +424,7 @@ sudo chmod 777 start status stop logs
 #!/bin/bash
 echo ""
 echo "Starting Geth node for Rinkeby ..."
-nohup geth --syncmode "fast" --rinkeby --rpcapi eth,web3,net --rpc --rpcport "8545" --rpcaddr "0.0.0.0" --rpccorsdomain  "*" --cache=512 >> $HOME/rinkeby.log &
+nohup geth --syncmode "fast" --rinkeby --rpcapi eth,web3,net --rpc --rpcport "8545" --rpcaddr "127.0.0.1" --rpccorsdomain  "*" --cache=1014 >> $HOME/rinkeby.log &
 echo "Geth node started ..."
 echo ""
 ```
