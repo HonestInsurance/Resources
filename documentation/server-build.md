@@ -376,7 +376,7 @@ server {
     listen 80;
     server_name  eth.honestinsurance.net eth.honest.tech rinkeby.honestinsurance.net rinkeby.honest.tech;
     location / {
-        proxy_pass http://0.0.0.0:8545;
+        proxy_pass http://127.0.0.1:8545;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection keep-alive;
@@ -388,6 +388,8 @@ server {
 **Important:** Ensure to use the above configuration file for nginx as it differs from the one used earlier. In particular DO NOT USE THE LINE BELOW IN THE FILE (otherwise Geth rejects the incoming requests):
 
 `proxy_set_header Host $host;`
+
+Note: The IP address configured in `proxy_pass http://127.0.0.1:8545;` can be any arbitrary IP address and port. However, it is crucial that this IP address & port matche the IP address and port on which the GETH process is listening on when the node is started with `nohup geth ... --rpcaddr "127.0.0.1" --rpcport "8545" ...`. 
 
 ## 7.2 Install SSL certificates
 
@@ -409,7 +411,7 @@ Follow the steps as [outlined above](#5---server-api-node-01---install-ssl-certi
 
 `$ sudo apt-get install ethereum`
 
-## 6.2 Scripts to start, stop and monitor the Geth node
+## 8.2 Scripts to start, stop and monitor the Geth node
 
 Create simple scipts to start, stop, monitor service:
 ```
@@ -469,7 +471,7 @@ echo ""
 tail -f $HOME/rinkeby.log
 ```
 
-## 6.3 Sync the node with the `start` command
+## 8.3 Sync the node with the `start` command
 
 To start the geth node and trigger the synchronisation of the node use the `$ start` script. To speed up the initial syncronisation of the node it is advisable to reserve 3.5GB or more RAM and 2 or more vCPUs to the server for this initial process.
 
@@ -478,3 +480,66 @@ Note 1: While the initial syncronisation is running do not interrup this process
 Note 2: This command synchronises the Rinkeby chain.
 
 Note 3: The location of the Blockchain files as well as keys and node details is `$HOME/.ethereum`.
+
+
+# 9 - Miscellaneous
+
+##  9.1 Script to create a single ABI file of all smart contracts within the smart contract solution
+
+The default `truffle compile --all` command creates an ABI file for every contract that is part of the solution. Typically these ABI files are stored in `./build/contracts` and contain a lot of additional information other than the ABI itself such as metadata, bytecode, deployedBytecode, ast to name just a few.
+
+The below script can be used to remove all the additional information within these files to receive just the ABIs for the contracts and combine them all in a single output file while still preserving the JSON format. This file can than be easily copied to any application server, parsed and consumed.
+
+The ABI file created is stored at `./build/abi/contractABIs.json`.
+
+The JSON format of the `contractABIs.json` file is as follows:
+
+```
+{
+    "abiContractA": [
+        ...
+        ...
+        ],
+    "abiContractB": [
+        ...
+        ...
+        ],
+    ...
+}
+```
+
+`$ sudo vi /usr/local/bin/parseABIs`
+
+`$ sudo chmod 777 /usr/local/bin/parseABIs`
+
+```
+#!/bin/bash
+
+# Set the source folder to be the build/contracts folder
+SOURCE_FOLDER=$HOME/GitHub/Smart-Contracts/build/contracts/*
+# Set the destination file to build/json/abiFiles.json
+DEST=$HOME/GitHub/Smart-Contracts/build/abi/contractABIs.json
+
+# Start the json file contents and overwrite everything that exists in it so far
+echo "{" > $DEST
+
+# Run through all files that exist in the Source folder
+for f in $SOURCE_FOLDER
+do
+    # Extract the file name
+    abiName="\"abi$(basename $f)\": ["
+    # Remove the .json ending
+    abiName=${abiName/.json/}
+    # Add the name with formatting to the output file
+    echo $abiName >> $DEST
+
+    # Parse the source file and only grab the abi content
+    grep -B 1000000 metadata $f | sed '/"metadata": "0x/s/,/ /' | sed '1d' | sed '1d' | sed '1d' | sed '/metadata/d' >> $DEST
+done
+
+# Delete the last line "],"
+sed -i '' -e '$ d' $DEST
+# Add the last 2 lines manually
+echo "  ]" >> $DEST
+echo "}" >> $DEST
+```
