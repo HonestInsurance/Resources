@@ -389,7 +389,7 @@ server {
 
 `proxy_set_header Host $host;`
 
-Note: The IP address configured in `proxy_pass http://127.0.0.1:8545;` can be any arbitrary IP address and port. However, it is crucial that this IP address & port matche the IP address and port on which the GETH process is listening on when the node is started with `nohup geth ... --rpcaddr "127.0.0.1" --rpcport "8545" ...`. 
+Note: The IP address configured in `proxy_pass http://127.0.0.1:8545;` needs to match the IP address and port on which the GETH process is listening on when the node is started with `nohup geth ... --rpcaddr "127.0.0.1" --rpcport "8545" ...`.
 
 ## 7.2 Install SSL certificates
 
@@ -426,7 +426,7 @@ sudo chmod 777 start status stop logs
 #!/bin/bash
 echo ""
 echo "Starting Geth node for Rinkeby ..."
-nohup geth --syncmode "fast" --rinkeby --rpcapi eth,web3,net --rpc --rpcport "8545" --rpcaddr "127.0.0.1" --rpccorsdomain  "*" --cache=1014 >> $HOME/rinkeby.log &
+nohup geth --syncmode "fast" --rinkeby --rpcapi eth,web3,net --rpc --rpcport "8545" --rpcaddr "127.0.0.1" --rpccorsdomain  "*" --cache=1024 >> $HOME/rinkeby.log &
 echo "Geth node started ..."
 echo ""
 ```
@@ -480,6 +480,8 @@ Note 1: While the initial syncronisation is running do not interrup this process
 Note 2: This command synchronises the Rinkeby chain.
 
 Note 3: The location of the Blockchain files as well as keys and node details is `$HOME/.ethereum`.
+
+Note 4: The initial sync of the Rinkeby chain took 3 days on an Unbuntu server with 4GB RAM, 2 vCPUs and `--cache=1024` specified in the geth command.
 
 
 # 9 - Miscellaneous
