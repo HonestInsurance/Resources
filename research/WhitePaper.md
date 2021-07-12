@@ -1,10 +1,10 @@
 [<img src="https://github.com/HonestInsurance/Resources/blob/master/branding/HonestInsurance-hor-blue.png?raw=true" width="250">](https://www.honestinsurance.net)
 
------------------------
+---
 
 **A subscription-based, self-governing, people-to-people insurance platform**
 
------------------------
+---
 
 # 1. Problems worth solving
 
@@ -40,6 +40,7 @@ A list of abbreviations and acronyms used in this paper is presented at the end.
 
 Some formulas use the expression of ‘+=’ or ‘-=’.
 
+---
 
 # 2. An alternative insurance model – Insurance Pools
 
@@ -60,6 +61,8 @@ Daily, the Insurance Pool charges the consumers today’s combined premium by tr
 Consumers can join and leave the insurance pool at their choosing. In addition, Consumers can have multiple insurance policies active in the same pool – each policy being independent from the others.
 
 A more granular discussion of the components required by the proposed insurance pool model is presented next.
+
+---
 
 # 3. Working Capital (WC)
 
