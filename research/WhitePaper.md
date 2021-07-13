@@ -146,15 +146,15 @@ The Risk premium (CCU<sub>Risk</sub>) in the context of WC<sub>Time</sub> can be
 
 〖CCU〗_Risk (x)=〖a*x〗^b+c     …    [ % ]
 
-The interest component (CCUInterest) in relation to WCTime is considered to be a linear function in which Liquidity Providers demand a fixed daily return for providing the funds. As a result, CCUInterest is the product of the demanded daily return and the duration (WCTime):
+The interest component (CCU<sub>Interest</sub>) in relation to WC<sub>Time</sub> is considered to be a linear function in which Liquidity Providers demand a fixed daily return for providing the funds. As a result, CCU<sub>Interest</sub> is the product of the demanded daily return and the duration (WC<sub>Time</sub>):
 
 〖CCU〗_Interest (x)=d*x     …    [ % ]
 
-CCUTotal can be calculated as the sum of CCURisk and CCUInterest.
+CCU<sub>Total</sub> can be calculated as the sum of CCU<sub>Risk</sub> and CCU<sub>Interest</sub>.
 
 〖CCU〗_Total (x)=〖CCU〗_Risk (x)+ 〖CCU〗_Interest (x)     …    [ % ]
 
-The ideal WCTargetTime can now be calculated by finding a minimum for CCUTotal:
+The ideal WC<sub>TargetTime</sub> can now be calculated by finding a minimum for CCU<sub>Total</sub>:
 
  〖WC〗_TargetTime=(〖CCU〗_Risk (x)+ 〖CCU〗_Interest (x))     …    [ day ]
 
@@ -163,12 +163,142 @@ Mathematically, we can conclude:
 0= 〖CCU〗_Total'(x)
 0= 〖CCU〗_Risk'(x)+ 〖CCU〗_Interest'(x)  
 0= 〖a*b* x〗^(b-1)+ d
+
 〖WC〗_TargetTime=√(b-1&(-d)/(a*b))    …    [ Day ]
 
-Demand of Working Capital (WCDelta)
+Demand of Working Capital (WC<sub>Delta</sub>)
 
-In comparing WCTargetTime with the current WCTime, the demand for additional WC required can be expressed as
+In comparing WC<sub>TargetTime</sub> with the current WC<sub>Time</sub>, the demand for additional WC required can be expressed as
 
 〖WC〗_Delta= 〖(WC〗_TargetTime-〖WC〗_Time)*〖WC〗_Exp    …    [cu]
 
-A positive value for WCDelta describes the demand for additional liquidity required to match WCTime with WCTargetTime. A negative value for WCDelta indicates that the insurance pool is over funded and no additional liquidity is required at this point in time.
+A positive value for WC<sub>Delta</sub> describes the demand for additional liquidity required to match WC<sub>Time</sub> with WC<sub>TargetTime</sub>. A negative value for WC<sub>Delta</sub> indicates that the insurance pool is over funded and no additional liquidity is required at this point in time.
+
+---
+
+# 4. Liquidity Providers and Insurance Pool Bonds (Bond)
+
+Liquidity Providers **invest** in the insurance pool by 
+
+* Purchasing Insurance Pool Bonds issued by the pool and 
+* Transferring the Principal of the Bond into the insurance pool’s Funding Account. 
+
+A Liquidity Provider can be any natural person of eligible age or a legal entity that is permitted to engage in commercial activity within the jurisdiction of the insurance pool’s locality.
+
+## Working Capital Transit (WC<sub>Transit</sub>)
+
+Due to a delay in a bond being issued and the corresponding principal being credited to the insurance pool’s bank account, the variable WC<sub>Transit</sub> is used to capture the sum of all the Bonds’ principal in transit.
+
+Bond B issued:    〖WC〗_Transit  +=〖Bond〗_Principal    …    [cu]
+Bond B credited:    〖WC〗_Transit  -=〖Bond〗_Principal    …    [cu]
+
+When the Liquidity Provider fails to deposit the principal within the Bond Payment Period, the Bond contract is voided and the corresponding WCTransit is removed as well.
+
+Bond B voided:    〖WC〗_Transit  -=〖Bond〗_Principal    …    [cu]
+
+To encourage Liquidity Providers to deposit the principal and fulfil their contractual obligations, Liquidity Providers need to provide a security valued at 10% of the value of the Bond’s principal. If a Liquidity Provider fails to deposit the principal, the ownership of the security transfers to the insurance pool. Two options are proposed to provide this security:
+
+1. Deposit 10% of the bond’s principal into the Funding Account.
+2.  Reference an existing insurance pool bond
+    * Whose principal amount has already been credited
+    * That does not expire (reach maturity) within the Bond Payment Period
+    * That is currently not being used as a reference for another bond.
+
+As stated earlier, when the principal does not get credited within the Bond Payment Period, the ownership of the referenced insurance bond transfers to the insurance pool (i.e. the owner of the bond forfeits a percentage of the bond’s principal including its yield). If the principal is credited within the time limit, the hold on the bond is removed.
+
+## Working Capital Bond (WC<sub>Bond</sub>)
+
+Taking WC<sub>Transit</sub> into account, the actual demand for new capital (WC<sub>Bond</sub>) to be acquired by the insurance pool through issuing bonds can be calculated as follows:
+
+〖WC〗_Bond= 〖WC〗_Delta-〖WC〗_Transit    …    [cu]
+
+In purchasing Bonds, the following bond constraints and clauses apply to Liquidity Providers.
+
+## Bond Principal
+
+The combined principal of all Bonds on sale is limited and defined by WC<sub>Bond</sub>. If WC<sub>Bond</sub> is zero or negative, no bonds are available for purchase. Otherwise, Liquidity Providers can choose any desired principal amount as long as the principal is equal to or lesser than WCBond. In addition, Liquidity Providers can purchase a multitude of Bonds.
+
+## Bond Maturity
+
+The maturity of any Bond is a constant and defined by WC<sub>TargetTime</sub>. No bonds with a maturity unequal to WC<sub>TargetTime</sub> are offered.
+
+## Bond Yield (Yield to Maturity)
+
+The actual yield Liquidity Providers can expect from a bond (BondYield) is the result of supply and demand market forces. This model proposes a dynamic way of adjusting the Yield and Gradient for the bonds on offer.  An escalator will be used to illustrate the concept of adjusting the Yield and Gradient.
+The properties of the escalator are: 
+
+The number of steps on the escalator equals WC<sub>Bond</sub> (one step for every unit of cu currency – e.g. $ 10 results in 10 steps). Figure 1 displays an escalator with 8 steps ➔ WC<sub>Bond</sub> = 8.
+At the beginning, the steps are distributed evenly from the top to the bottom step just like a normal escalator (see Figure 1). Yield refers to the yield of the top step on the escalator (the yield of the highest selling unit of WCBond on offer). Gradient describes the step-by-step decrease in yield starting from the top step’s yield.
+
+The steps are moving together at the same speed just like a normal escalator. Figure 2 displays this scenario in which the Yield (yield of the top step) moves from 6% to 7.5%. In addition, all the remaining steps’ yield has increased by the same delta of 1.5%. 
+All steps on the escalator accelerate vertically at the same rate by multiplying the Yield with a Yield Acceleration Constant (YAC) on a minute by minute basis. In Figure 2, the Yield is at 7.5%. Hence, the escalator accelerates at the rate of (1 + 7.5%) multiplied by YAC.
+The height of the ground of any step represents the yield this step holds. (e.g. in Figure 2 the top step’s yield is 9%, while the bottom step’s yield is at 3% with the remaining steps distributed evenly).
+
+Liquidity Providers purchase any number of steps on the escalator starting from the top downward. As a result, the combined bond’s yield (BondYield) is the average of the steps’ yield purchased. In Figure 3, a Liquidity Provider purchased three steps. Hence, the bond’s combined yield is the average of all the steps’ yield purchased ([7.5% + 6.75% + 6%] / 3 ➔ BondYield = 6.75%).
+
+When an updated demand for liquidity is calculated by the insurance pool (new value for WC<sub>Delta</sub> and WC<sub>Bond</sub>), the escalator gets a reset with WC<sub>Bond</sub> steps being redistributed evenly from the last Yield value (before the reset) to a yield of zero. If WC<sub>Bond</sub> is zero or negative, no steps are available for purchase from the escalator. 
+
+Such a reset is illustrated in Figure 4 with a new WC<sub>Bond</sub> of 12, a Yield of 5.25% (equals Yield before the reset), and the steps being redistributed equally.
+
+## Re-initialization of WCBond, Yield and Gradient
+
+At periodic intervals, a new demand for WC<sub>Delta</sub> is calculated by the insurance pool. This event in turn triggers a recalculation of WC<sub>Bond</sub>, Yield and Gradient which are referenced by the process of issuing new Bonds.
+
+First, a new value for WC<sub>Bond</sub> is calculated by using the previous formula 
+
+〖WC〗_Bond= 〖WC〗_Delta-〖WC〗_Transit    …    [ cu ]
+
+Yield (Yield of the top step) remains at the same value. If no value has been defined in the past, a value of 1% is chosen as its initial value.
+Finally, the Gradient can be recalculated by
+
+Gradient=  Yield/〖WC〗_Bond     …    [ % ]
+
+## Acceleration of Yield
+
+The Yield of the insurance pool accelerates at a discrete interval of one minute. However, this increase is executed only if WC<sub>Bond</sub> exceeds a minimum threshold of 10% of WC<sub>Exp</sub>.
+
+Yield= Yield*(1+YAC [% per minute])  |  〖WC〗_Bond>〖WC〗_Exp*10%
+
+The reasoning for this 10% threshold is twofold. First, the resources consumed on a minute-by-minute basis to increase the Yield in comparison to the outstanding WCBond volume may not justify its operations.
+
+Second, and more importantly, a small value for WC<sub>Bond</sub> may not make it worthwhile to any Liquidity Provider to purchase a bond with the remaining WC<sub>Bond</sub> as its principal. This would potentially cause the Yield to increase to a very high value. When a reinitialization occurs and a higher WC<sub>Bond</sub> demand is on offer, a significant portion of this WC<sub>Bond</sub> becomes available at an unjustifiably high Yield.
+
+The implications in choosing an appropriate value for YAC are as follows:
+
+Double Value Time represents the duration it would take the Yield to increase by a factor of two (i.e. to double in value). Hence, this duration determines the insurance pool’s ability to respond to a changing environment in which Liquidity Providers request a higher Yield.
+
+Double Value Time=  (ln (2) )/(ln (1+YAC [% per hour]) )    …    [ hour ]
+
+Turnover Rate refers to the time it would take to sell all the WC<sub>Bond</sub> under the condition that Liquidity Providers’ demanded Yield remains constant. This can be perceived as the speed at which WC<sub>Bond</sub> is being ‘sold’ to Liquidity Providers.
+
+Turnover Rate=  1/(YAC [% per hour])    …    [ hour ]
+
+The relationship between Double Value Time and Turnover Rate, depending on YAC, is shown in the diagram below. 
+ 
+To obtain YAC on a per minute basis calculate 
+
+YAC= √(60&YAC [% per hour]+1)-1   …    [ % per minute]
+
+## Issuing of a new Insurance Pool Bond (Bond)
+
+The terms of a newly issued Bond are as follows:
+
+〖Bond〗_Principal= Liquidity Providers choosing  |  0<〖Bond〗_Principal≤〖WC〗_Bond    …    [ cu ]
+〖Bond〗_Yield= Yield-  (Gradient * 〖Bond〗_Principal)/2    …    [ % ]
+〖Bond〗_Maturity= 〖WC〗_TargetTime
+
+Bond payment deadline=Bond Payment Period   …    [ hour ]
+
+## Adjustment of WCBond and Yield
+
+Upon the successful issue of a Bond, WCBond and Yield are adjusted:
+
+〖WC〗_Bond  -=〖Bond〗_Principal
+Yield -=Gradient*〖Bond〗_Principal
+
+## Reimbursement of Liquidity Providers
+
+At the time, a Bond matures, the Bond’s principal (BondPrincipal) plus yield (BondYield) are transferred back to the Liquidity Provider.
+
+Bond payout amount= 〖[Bond〗_Principal*(1+〖Bond〗_Yield)]   …    [ cu ]
+
