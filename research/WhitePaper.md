@@ -45,7 +45,7 @@ A list of abbreviations and acronyms used in this paper is presented at the end.
 Some formulas use the expression of '+=' or '-='.
 
 <img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch1-img2.svg?raw=true" width="800">
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch1-img3.svg?raw=true" width="800">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch1-img2.png?raw=true" width="800">
 
 ## 2. An alternative insurance model – Insurance Pools
 
