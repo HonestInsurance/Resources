@@ -40,9 +40,12 @@ This paper proposes an alternative model of insurance that addresses the issues 
 
 A list of abbreviations and acronyms used in this paper is presented at the end. Formulas outlined in this paper use the structure as shown below. The information presented within cornered brackets [ ] shows the unit (e.g. days, hours, minutes, points, %, Currency, etc.)
 
-######
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch1-img1.svg?raw=true" width="600">
 
 Some formulas use the expression of '+=' or '-='.
+
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch1-img2.svg?raw=true" width="800">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch1-img3.svg?raw=true" width="800">
 
 ## 2. An alternative insurance model – Insurance Pools
 
