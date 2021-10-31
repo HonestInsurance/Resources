@@ -335,7 +335,7 @@ Upon the successful issue of a Bond, WC<sub>Bond</sub> and Yield are adjusted:
 
 At the time, a Bond matures, the Bond's principal (BondPrincipal) plus yield (BondYield) are transferred back to the Liquidity Provider.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img17.png?raw=true" width="580">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img17.png?raw=true" width="570" style="padding-left:40px">
 
 ---
 
@@ -347,9 +347,9 @@ Consumers can participate and get insurance coverage by subscribing to the insur
 
 As the policy risk coverage (PolicyRisk) is different from policy to policy, an objective and quantifiable process (or formula) to compare various insurance policies with each other is required. Such a process may differ again from insurance pool to insurance pool and hence needs to be defined in the context of the insurance pool's environment.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img1.png?raw=true" width="710">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img1.png?raw=true" width="800" style="padding:20px">
 
-##### The required function needs to meet the following criteria:
+### The required function needs to meet the following criteria:
 
 - Considers 'n' predefined parameters that are provided as input variables in the calculation
 - Does not depend on any source of data other than the 'n' input variables provided
@@ -357,7 +357,7 @@ As the policy risk coverage (PolicyRisk) is different from policy to policy, an 
 - Provides enough granularity so that the median value for PolicyRisk returned is around 1000 points
 - Provides consistent results in returning PolicyRisk values for policies that capture their relative risk to each other. Risk in this context relates to a policy's **likelihood** of claim events occurring and the policy's claim events' combined **financial impact** on the insurance pool.
 
-##### Some considerations in choosing input parameters are:
+### Some considerations in choosing input parameters are:
 
 - Can the Consumer provide this parameter easily?
 - What is the likelihood of a Consumer misinterpreting the parameter (i.e. providing the wrong information)?
