@@ -47,6 +47,8 @@ Some formulas use the expression of '+=' or '-='.
 <img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch1-img2.png?raw=true" width="700">
 <img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch1-img3.png?raw=true" width="700">
 
+---
+
 ## 2. An alternative insurance model – Insurance Pools
 
 A conceptual overview of the proposed insurance pool model is presented in the diagram below.
@@ -69,15 +71,17 @@ Consumers can join and leave the insurance pool at their choosing. In addition, 
 
 A more granular discussion of the components required by the proposed insurance pool model is presented next.
 
-## 3. Working Capital (WC)
+---
+
+# 3. Working Capital (WC)
 
 WC refers to the monetary assets of the insurance pool. These assets are available in accounts (e.g. a bank account), are denominated in currency units [cu] (e.g. EUR 150 cu ⪮ EUR 1.50 ⪮ 150 EURO cents) and are used to meet the insurance pool's financial obligations.
 
-### Working Capital Balance (WC<sub>Bal</sub>)
+## Working Capital Balance (WC<sub>Bal</sub>)
 
 WC<sub>Bal</sub> refers to the account balance of Funding Account at any given point in time and can only be positive.
 
-### Working Capital Expenditures (WC<sub>Exp</sub>)
+## Working Capital Expenditures (WC<sub>Exp</sub>)
 
 The proposed model utilizes historic expenses to make a prediction about the insurance pool's 'near' future expenses. These historical **daily expenses** of running the insurance pool can be calculated with 'n' being the number of days in the past that are considered.
 
@@ -92,7 +96,7 @@ Hence, if 'n' is chosen too narrowly, a substantial (or in other words costly) s
 
 WC<sub>Exp</sub> accounts only for actual costs that are settled from the funding account. As a result, Locked Working Capital (WC<sub>Locked</sub>) is not considered in this calculation.
 
-### Working Capital Locked (WC<sub>Locked</sub>)
+## Working Capital Locked (WC<sub>Locked</sub>)
 
 Due to sometimes significant time gaps between claim incidents and their settlements, WC<sub>Locked</sub> is used in this model to account for these future liabilities (accrued liabilities are created). The purpose of these accruals is to capture expected future expenditures in a timely fashion, allowing the model to respond more quickly to a changing environment.
 
@@ -105,7 +109,7 @@ Due to sometimes significant time gaps between claim incidents and their settlem
 
 If an accrual has been established for a claim, this liability will be removed from WC<sub>Locked</sub> at claim settlement.
 
-### Working Capital Time (WC<sub>Time</sub>)
+## Working Capital Time (WC<sub>Time</sub>)
 
 A key metric on which the health of the insurance pool can be assessed is the duration in days WC<sub>Bal</sub> is able to cover **anticipated** claim payments without having any additional contributions made to it. This metric is called Working Capital Time (WC<sub>Time</sub>) and can be calculated as follows:
 
@@ -113,7 +117,7 @@ A key metric on which the health of the insurance pool can be assessed is the du
 
 Since WC<sub>Locked</sub> is included in this formula, WC<sub>Time</sub> can also be a negative value. This would mean that WC<sub>Bal</sub> is insufficient to cover the anticipated claims represented by WC<sub>Locked</sub> causing the insurance pool to be in debt. However, the insurance pool remains solvent as long as WC<sub>Bal</sub> is able to fund ongoing WC<sub>Exp</sub>.
 
-### Working Capital Target Time (WC<sub>TargetTime</sub>)
+## Working Capital Target Time (WC<sub>TargetTime</sub>)
 
 WC<sub>TargetTime</sub> represents the most important constant to be defined in this model for any given insurance pool. The proposed model's single objective is to maintain its solvency by making WC<sub>Time</sub> match WC<sub>TargetTime</sub> (neither more nor less).
 
@@ -122,30 +126,29 @@ A thorough discussion on defining the Target Time for any given insurance pool w
 1. **Capital Costs per Unit (CCU) of Working Capital** deployed in the bank account as WC<sub>Bal</sub> is the rate of return Liquidity Providers demand as compensation for providing liquidity and represent the costs of financing the insurance pool.
 2. **Trust** in the insurance pool by all its stakeholders. Trust can be defined as the extent to which the insurance pool stakeholders believe in the **enduring solvency** of the pool.
 3. Balancing **CCU** with **Trust** may be difficult as these two are interdependent with each other. A selected few **qualitative** factors that may impact the **trust in the enduring solvency** of the pool are:
-
-- Financial strength of the insurance pool
-- Strength of the insurance pool community among its members. Do the insurance Consumers remain loyal to the pool if insurance premiums increase due to the misfortune of some of their fellow Consumers?
-- Perceived impact of a maximum credible accident on the insurance pool
-- Transparency of the operations performed by the insurance pool stakeholders
-- Perceived honesty of the insurance pool stakeholders
-- Legislative uncertainties and impediments imposed on the insurance operations
+   - Financial strength of the insurance pool
+   - Strength of the insurance pool community among its members. Do the insurance Consumers remain loyal to the pool if insurance premiums increase due to the misfortune of some of their fellow Consumers?
+   - Perceived impact of a maximum credible accident on the insurance pool
+   - Transparency of the operations performed by the insurance pool stakeholders
+   - Perceived honesty of the insurance pool stakeholders
+   - Legislative uncertainties and impediments imposed on the insurance operations
 
 From a **quantitative** point of view, the optimum WC<sub>TargetTime</sub> can be defined as the time at which the Capital Costs per Unit (CCU) are at a minimum so that the insurance pool can source its liquidity at a discount. CCU are the sum of two components:
 
-1. **Interest (CCU****Interest****)** – This represents the expected return for a near risk-free investment (the expected return for providing the capital). A benchmark for this interest rate may be government bonds or the interest on bank cash deposits (i.e. interest on near risk-free investments).
-2. **Risk premium (CCU****Risk****)** represents the return Liquidity Providers demand for accepting risks that are associated with their investment. The **trust in the enduring solvency of the insurance pool** with the qualitative factors outlined earlier (plus those that are missing) may have a significant impact on the risk premiums demanded by the Liquidity Providers.
+1. **Interest (CCU<sub>Interest</sub>)** – This represents the expected return for a near risk-free investment (the expected return for providing the capital). A benchmark for this interest rate may be government bonds or the interest on bank cash deposits (i.e. interest on near risk-free investments).
+2. **Risk premium (CCU<sub>Risk</sub>)** represents the return Liquidity Providers demand for accepting risks that are associated with their investment. The **trust in the enduring solvency of the insurance pool** with the qualitative factors outlined earlier (plus those that are missing) may have a significant impact on the risk premiums demanded by the Liquidity Providers.
 
 The diagram below displays the anticipated Risk premium (CCU<sub>Risk</sub>), the Interest(CCU<sub>Interest</sub>) and the Total markup (CCUTotal) as the sum of CCU<sub>Risk</sub> and CCU<sub>Interest</sub> in relation to WC<sub>Time</sub>.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/CapitalCostPerUnit-of-WorkingCapital.png" width="800">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/CapitalCostPerUnit-of-WorkingCapital.png?raw=true" width="600">
 
 The assumption for the CCU<sub>Risk</sub> component is that an increasing WC<sub>Time</sub> also causes WC<sub>Bal</sub> to grow. As a result, it can be assumed that the Liquidity Providers' confidence in the solvency of the pool grows as greater financial strength enables the pool to withstand disruptive events more easily. Due to this perceived lower risk, Liquidity Providers may accept a lower CCU<sub>Risk</sub> in return.
 
 The qualitative nature of the CCU<sub>Risk</sub> graph displayed above shows that Liquidity Providers are more sensitive to a change in WC<sub>Time</sub> when WC<sub>Time</sub> is low, as a change by one unit (day) causes a greater percentage change in WC<sub>Bal</sub> compared to a higher WC<sub>Time</sub> (see scenarios below).
 
-###### Scenario 1: WC<sub>Time</sub> increases from 1 to 2 days ➔ WC<sub>Bal</sub> grows by 100%.
+### Scenario 1: WC<sub>Time</sub> increases from 1 to 2 days ➔ WC<sub>Bal</sub> grows by 100%.
 
-###### Scenario 2: WC<sub>Time</sub> increases from 50 to 51 days ➔ WC<sub>Bal</sub> grows by 2%.
+### Scenario 2: WC<sub>Time</sub> increases from 50 to 51 days ➔ WC<sub>Bal</sub> grows by 2%.
 
 Finally, a very high WC<sub>Time</sub> (and WC<sub>Bal</sub>) may provide Liquidity Providers with such confidence that they do not demand any risk compensation at all (CCU<sub>Risk</sub> = 0).
 
@@ -180,7 +183,7 @@ Mathematically, we can conclude:
 ######
 
 
-### Demand of Working Capital (WC<sub>Delta</sub>)
+## Demand of Working Capital (WC<sub>Delta</sub>)
 
 In comparing WC<sub>TargetTime</sub> with the current WC<sub>Time</sub>, the demand for additional WC required can be expressed as
 
@@ -191,8 +194,9 @@ A positive value for WC<sub>Delta</sub> describes the demand for additional liqu
 
 ##
 
+---
 
-## 4. Liquidity Providers and Insurance Pool Bonds (Bond)
+# 4. Liquidity Providers and Insurance Pool Bonds (Bond)
 
 Liquidity Providers **invest** in the insurance pool by
 
@@ -201,7 +205,7 @@ Liquidity Providers **invest** in the insurance pool by
 
 A Liquidity Provider can be any natural person of eligible age or a legal entity that is permitted to engage in commercial activity within the jurisdiction of the insurance pool's locality.
 
-### Working Capital Transit (WCTransit)
+## Working Capital Transit (WCTransit)
 
 Due to a delay in a bond being issued and the corresponding principal being credited to the insurance pool's bank account, the variable WCTransit is used to capture the sum of all the Bonds' principal in transit.
 
@@ -226,7 +230,7 @@ To encourage Liquidity Providers to deposit the principal and fulfil their contr
 
 As stated earlier, when the principal does not get credited within the Bond Payment Period, the ownership of the referenced insurance bond transfers to the insurance pool (i.e. the owner of the bond forfeits a percentage of the bond's principal including its yield). If the principal is credited within the time limit, the hold on the bond is removed.
 
-### Working Capital Bond (WC<sub>Bond</sub>)
+## Working Capital Bond (WC<sub>Bond</sub>)
 
 Taking WCTransit into account, the actual demand for new capital (WC<sub>Bond</sub>) to be acquired by the insurance pool through issuing bonds can be calculated as follows:
 
@@ -235,15 +239,15 @@ Taking WCTransit into account, the actual demand for new capital (WC<sub>Bond</s
 
 In purchasing Bonds, the following bond constraints and clauses apply to Liquidity Providers.
 
-### Bond Principal
+## Bond Principal
 
 The combined principal of all Bonds on sale is limited and defined by WC<sub>Bond</sub>. If WC<sub>Bond</sub> is zero or negative, no bonds are available for purchase. Otherwise, Liquidity Providers can choose any desired principal amount as long as the principal is equal to or lesser than WC<sub>Bond</sub>. In addition, Liquidity Providers can purchase a multitude of Bonds. ![](RackMultipart20211030-4-10ku6rx_html_c6ef2c0d1d5d2f53.png)
 
-### Bond Maturity
+## Bond Maturity
 
 The maturity of any Bond is a constant and defined by WC<sub>TargetTime</sub>. No bonds with a maturity unequal to WC<sub>TargetTime</sub> are offered.
 
-### Bond Yield (Yield to Maturity)
+## Bond Yield (Yield to Maturity)
 
 The actual yield Liquidity Providers can expect from a bond (BondYield) is the result of supply and demand market forces. This model proposes a dynamic way of adjusting the **Yield and Gradient** for the bonds on offer. An escalator will be used to illustrate the concept of adjusting the **Yield and Gradient.**![](RackMultipart20211030-4-10ku6rx_html_16b71ef8cd5bd.png)
 
@@ -258,7 +262,7 @@ The properties of the escalator are:
 - When an updated demand for liquidity is calculated by the insurance pool (new value for WC<sub>Delta</sub> and WC<sub>Bond</sub>), the escalator gets a reset with WC<sub>Bond</sub> steps being redistributed evenly from the last **Yield** value (before the reset) to a yield of zero. If WC<sub>Bond</sub> is zero or negative, no steps are available for purchase from the escalator.
  Such a reset is illustrated in Figure 4 with a new WC<sub>Bond</sub> of 12, a **Yield** of 5.25% (equals **Yield** before the reset), and the steps being redistributed equally.
 
-### Re-initialization of WC<sub>Bond</sub>, Yield and Gradient
+## Re-initialization of WC<sub>Bond</sub>, Yield and Gradient
 
 At periodic intervals, a new demand for WC<sub>Delta</sub> is calculated by the insurance pool. This event in turn triggers a recalculation of **WC**** Bond ****, Yield** and **Gradient** which are referenced by the process of issuing new Bonds.
 
@@ -273,7 +277,7 @@ At periodic intervals, a new demand for WC<sub>Delta</sub> is calculated by the 
 ######
 
 
-### Acceleration of Yield
+## Acceleration of Yield
 
 The **Yield** of the insurance pool **accelerates at a discrete interval of one minute**. However, this increase is executed only if WC<sub>Bond</sub> exceeds a minimum threshold of 10% of WC<sub>Exp</sub>.
 
@@ -303,7 +307,7 @@ To obtain YAC on a per minute basis calculate
 ######
 
 
-### Issuing of a new Insurance Pool Bond (Bond)
+## Issuing of a new Insurance Pool Bond (Bond)
 
 The terms of a newly issued Bond are as follows:
 
@@ -319,7 +323,7 @@ The terms of a newly issued Bond are as follows:
 ######
 
 
-### Adjustment of WC<sub>Bond</sub> and Yield
+## Adjustment of WC<sub>Bond</sub> and Yield
 
 Upon the successful issue of a Bond, WC<sub>Bond</sub> and Yield are adjusted:
 
@@ -329,18 +333,19 @@ Upon the successful issue of a Bond, WC<sub>Bond</sub> and Yield are adjusted:
 ######
 
 
-### Reimbursement of Liquidity Providers
+## Reimbursement of Liquidity Providers
 
 At the time, a Bond matures, the Bond's principal (BondPrincipal) plus yield (BondYield) are transferred back to the Liquidity Provider.
 
 ######
 
+---
 
-## 5. Insurance Consumers
+# 5. Insurance Consumers
 
 Consumers can participate and get insurance coverage by subscribing to the insurance pool service. The term 'subscription' has been chosen deliberately since the proposed model provides a service that allows Consumers to trade their **policy risk coverage** (PolicyRisk) in exchange for a subscription fee **on a day-by-day basis**. Note: As mentioned earlier, consumers can choose the payment frequency as they are 'pre-funding' their insurance policy's holding account (Premium Account). From this account, all the consumers are charged the combined premium on a daily basis.
 
-### Insurance Pool Risk Assessment function
+## Insurance Pool Risk Assessment function
 
 As the policy risk coverage (PolicyRisk) is different from policy to policy, an objective and quantifiable process (or formula) to compare various insurance policies with each other is required. Such a process may differ again from insurance pool to insurance pool and hence needs to be defined in the context of the insurance pool's environment.
 
@@ -364,7 +369,7 @@ As the policy risk coverage (PolicyRisk) is different from policy to policy, an 
 
 The ability and ease in defining such a function provides an indication for the suitability of forming a desired insurance pool. A cumbersome and difficult formula with many input parameters may be a strong indication of an insurance pool with too broad boundaries (i.e. one pool for everything). On the other hand, a very simple formula may provide an opportunity to broaden the pool's boundaries.
 
-### Insurance Pool's boundaries
+## Insurance Pool's boundaries
 
 Further considerations in choosing the boundaries of what can get coverage and what cannot get coverage in an insurance pool are:
 
@@ -373,7 +378,7 @@ Further considerations in choosing the boundaries of what can get coverage and w
 - The diversity of the communities and individuals the insurance pool is consumed by
 - The complexity in dealing with special or unique potential policies.
 
-### Cost of insurance to Consumer
+## Cost of insurance to Consumer
 
 Consumers are charged their policies subscription fee to compensate Liquidity Providers for providing liquidity by purchasing bonds. The following steps are proposed to determine the fee that is charged to every insurance consumer.
 
@@ -448,9 +453,11 @@ Overflow payment occur when 'excessive' funds in the Bond Account are debited an
 
 If the calculated value of OverflowYesterday is positive, the corresponding amount gets transferred. This model relies on overflow payments especially during periods of growth in order to avoid the unnecessary accumulation of funds in the Bond account. This model puts these funds to 'work' by redirecting them into the Funding pool.
 
-## 6. Insurance Pool Service Providers
+---
 
-### Insurance Claim Adjusters & Legal Services
+# 6. Insurance Pool Service Providers
+
+## Insurance Claim Adjusters & Legal Services
 
 The services of Claim Adjusters are required by the insurance pool to (1) investigate, (2) make decisions and (3) settle the insurance claims raised by the Consumers. The main objective of the group of adjustors is to provide consistency in handling the claims within the insurance pool (i.e. consistency in the context of all claims being handled across all adjustors). Due to the somewhat subjective nature of making insurance claim decisions, adjustors play a key role in providing a fair insurance service to the Consumers.
 
@@ -460,11 +467,11 @@ Legal assistance may be required to support Claim Adjusters in settling ambiguou
 
 Claim Adjusters as well as legal service provider are compensated from the insurance pool on a claim-by-claim basis. The fee structure and compensation model for the services provided may differ from insurance pool to pool. However, and most importantly, these service providers are independent and are not incentivized to either marginalize or amplify insurance claim costs. They are incentivized in every possible way to make effective, fair and consistent decisions.
 
-### Suppliers
+## Suppliers
 
 Claim Adjusters engage Suppliers on a claim-by-claim basis to rectify the damage caused by the claim. The Supplier's remuneration depends on an agreement between the Supplier and the Claim Adjuster being found.
 
-### Pool Owners / Trust / Mutual
+## Pool Owners / Trust / Mutual
 
 An insurance pool model needs to provide clear instructions, rules, guidelines and procedures that can be followed by the stakeholders in engaging with the insurance pool. The claims process bears a particular challenge for the insurance Pool Operators and the claims Adjusters alike in creating rules and guidelines on how to deal with the infinite number of possible claim situations. Despite the insurance Pool Operators' best efforts, the insurance pool will likely fall short in providing enough rules and guidelines as life in its very nature is too complex and decisions are often ambiguous.
 
@@ -476,7 +483,7 @@ Safety Net service providers are NOT bound by any rules or guidelines in making 
 
 Another responsibility that falls with this entity is to be the legal representative body and 'owner' of this insurance pool. As the name suggest this entity is set up as a Trust representing the interests of all involved stakeholders in this ecosystem (Consumers, Liquidity Providers, Suppliers, Claim Adjusters and Pool Operators). In addition, this Trust are the rightful owners of the 3 bank accounts required by the pool (Funding Account, Bond Account and Premium Account).
 
-### Insurance Pool Operators
+## Insurance Pool Operators
 
 The insurance Pool Operators are the initiators and the executing body of the insurance pool. The model suggests that these operators work under the umbrella of their own legal entity (e.g. limited company; Ltd.) that is registered within the insurance pool's environment.
 
@@ -490,7 +497,7 @@ This entity is responsible for:
 
 To avoid any potential conflict of interest issues that may arise as a result of the tasks and duties performed by the legal entity representing the insurance Pool Operators, the model proposes a fixed fee (percentage fee of WC<sub>Exp</sub>) that is allocated to the Pool Operators. This fixed fee can be perceived as the overhead costs of running the insurance pool as this legal entity does not provide any direct and tangible benefits to any insurance pool Consumer.
 
-## 7. Relevant Research
+# 7. Relevant Research
 
 It is interesting to observe how small and well-established corporations alike struggle to capitalize on the value of existing and freely available research offers. It may be the case that many of the organization's stakeholders are aware of the information, but the actual implementation and the corresponding change associated with executing on it represents the bigger obstacle.
 
@@ -501,7 +508,9 @@ Creating a new insurance pool offers an opportunity to consider and leverage res
 - James Surowiecki's publication on 'The Wisdom of Crowds' (12) gives profound insight into the combined decision-making power of crowds provided the necessary preconditions are met.
 - Nobel laureate Daniel Kahneman's prospect theory (13) makes an argument to take human's cognitive biases into account. An important example of a cognitive bias to consider is loss-aversion – &quot;they are more likely to act to avert a loss than to achieve a gain&quot; (14).
 
-## 8. Conclusion
+---
+
+# 8. Conclusion
 
 In this paper, an alternative model of insurance is presented. It builds on the aspects that are working well (sharing of risk among the insured) while eliminating some of the major flaws in this industry. The conflict of interest between the owner of the insurance and the customers has been resolved as the concept of ownership of an insurance pool has been redefined. The insurance Pool Operators (that may be perceived as the owners) are compensated through a fixed fee and hence would only destroy trust in the pool by not honoring Consumers' rights. Hence, claims Adjusters are empowered to work with a Consumer while acting as a representative and on behalf of insurance pool community.
 
@@ -511,10 +520,9 @@ In honoring the model outlined, it is very likely that only insurance products t
 
 Lastly, the insurance value proposition (value for money) should increase drastically from 50% to well above 90% as arguably the only overhead cost within the proposed model is the fixed fee to be paid to the insurance Pool Operators. Since the proposed model is a clearly defined system, the flow of money, including its rationale and operating procedures, can be verified by the community. It is the loop of disclosing information and receiving ongoing feedback from the community that builds trust and may represent the strongest argument for this new model of insurance.
 
-##
+---
 
-
-## Acronyms
+# Acronyms
 
 **Currency Unit**** [cu]** The smallest denomination of the currency used for the insurance pool
  (Dollar Cent, Euro Cent, BTC Satoshi)
@@ -559,7 +567,9 @@ Lastly, the insurance value proposition (value for money) should increase drasti
 
 **Bond Payment Period [hour]** The period in hours within the Bond's principal has to be credited to the insurance pool's bank account.
 
-## References
+---
+
+# References
 
 1. **Wikipedia.** Insurance. [Online] 2016.
 [https://en.wikipedia.org/wiki/Insurance](https://en.wikipedia.org/wiki/Insurance)
