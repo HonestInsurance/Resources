@@ -83,7 +83,6 @@ The proposed model utilizes historic expenses to make a prediction about the ins
 
 <img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch2-img1.png?raw=true" width="500">
 
-
 In selecting an appropriate value for 'n' two aspects must be considered:
 
 1. The influence of one or more significant events in the time period being considered
@@ -97,8 +96,7 @@ WC<sub>Exp</sub> accounts only for actual costs that are settled from the fundin
 
 Due to sometimes significant time gaps between claim incidents and their settlements, WC<sub>Locked</sub> is used in this model to account for these future liabilities (accrued liabilities are created). The purpose of these accruals is to capture expected future expenditures in a timely fashion, allowing the model to respond more quickly to a changing environment.
 
-######
-
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch2-img2.png?raw=true" width="500">
 
 'm' represents the total number of claims for which an accrual has been established. Note: Establishing an accrual for a claim should be considered an exception to the rule and not the default operating procedure, the exception being if:
 
