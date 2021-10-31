@@ -81,7 +81,7 @@ WC<sub>Bal</sub> refers to the account balance of Funding Account at any given p
 
 The proposed model utilizes historic expenses to make a prediction about the insurance pool's 'near' future expenses. These historical **daily expenses** of running the insurance pool can be calculated with 'n' being the number of days in the past that are considered.
 
-######
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch2-img1.png?raw=true" width="500">
 
 
 In selecting an appropriate value for 'n' two aspects must be considered:
