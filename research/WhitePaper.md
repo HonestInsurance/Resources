@@ -237,7 +237,7 @@ In purchasing Bonds, the following bond constraints and clauses apply to Liquidi
 
 ## Bond Principal
 
-The combined principal of all Bonds on sale is limited and defined by WC<sub>Bond</sub>. If WC<sub>Bond</sub> is zero or negative, no bonds are available for purchase. Otherwise, Liquidity Providers can choose any desired principal amount as long as the principal is equal to or lesser than WC<sub>Bond</sub>. In addition, Liquidity Providers can purchase a multitude of Bonds. ![](RackMultipart20211030-4-10ku6rx_html_c6ef2c0d1d5d2f53.png)
+The combined principal of all Bonds on sale is limited and defined by WC<sub>Bond</sub>. If WC<sub>Bond</sub> is zero or negative, no bonds are available for purchase. Otherwise, Liquidity Providers can choose any desired principal amount as long as the principal is equal to or lesser than WC<sub>Bond</sub>. In addition, Liquidity Providers can purchase a multitude of Bonds.
 
 ## Bond Maturity
 
@@ -245,16 +245,18 @@ The maturity of any Bond is a constant and defined by WC<sub>TargetTime</sub>. N
 
 ## Bond Yield (Yield to Maturity)
 
-The actual yield Liquidity Providers can expect from a bond (BondYield) is the result of supply and demand market forces. This model proposes a dynamic way of adjusting the **Yield and Gradient** for the bonds on offer. An escalator will be used to illustrate the concept of adjusting the **Yield and Gradient.**![](RackMultipart20211030-4-10ku6rx_html_16b71ef8cd5bd.png)
+The actual yield Liquidity Providers can expect from a bond (BondYield) is the result of supply and demand market forces. This model proposes a dynamic way of adjusting the **Yield and Gradient** for the bonds on offer. An escalator will be used to illustrate the concept of adjusting the **Yield and Gradient.**!
+
+<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/BondYield.png?raw=true" width="600">
 
 The properties of the escalator are:
 
 - The number of steps on the escalator equals WC<sub>Bond</sub> (one step for every unit of cu currency – e.g. $ 10 results in 10 steps). Figure 1 displays an escalator with 8 steps ➔ WC<sub>Bond</sub> = 8.
 - At the beginning, the steps are distributed evenly from the top to the bottom step just like a normal escalator (see Figure 1). **Yield** refers to the yield of the top step on the escalator (the yield of the highest selling unit of WC<sub>Bond</sub> on offer). **Gradient** describes the step-by-step decrease in yield starting from the top step's yield.
-- The steps are moving together at the same speed just like a normal escalator. Figure 2 displays this scenario in which the **Yield** (yield of the top step) moves from 6% to 7.5%. In addition, all the remaining steps' yield has increased by the same delta of 1.5%. ![](RackMultipart20211030-4-10ku6rx_html_99b954453ff48116.png)
+- The steps are moving together at the same speed just like a normal escalator. Figure 2 displays this scenario in which the **Yield** (yield of the top step) moves from 6% to 7.5%. In addition, all the remaining steps' yield has increased by the same delta of 1.5%.
 - All steps on the escalator accelerate vertically at the same rate by multiplying the **Yield** with a **Yield Acceleration Constant (YAC)** on a minute by minute basis. In Figure 2, the **Yield** is at 7.5%. Hence, the escalator accelerates at the rate of (1 + 7.5%) multiplied by YAC.
 - The height **of the ground** of any step represents the yield this step holds. (e.g. in Figure 2 the top step's yield is 9%, while the bottom step's yield is at 3% with the remaining steps distributed evenly).
-- Liquidity Providers purchase any number of steps on the escalator starting from the top downward. As a result, the combined bond's yield (BondYield) is the average of the steps' yield purchased. In Figure 3, a Liquidity Provider purchased three steps. Hence, the bond's combined yield is the average of all the steps' yield purchased ([7.5% + 6.75% + 6%] / 3 ➔ BondYield = 6.75%). ![](RackMultipart20211030-4-10ku6rx_html_ea54aba7442e3ecf.png)
+- Liquidity Providers purchase any number of steps on the escalator starting from the top downward. As a result, the combined bond's yield (BondYield) is the average of the steps' yield purchased. In Figure 3, a Liquidity Provider purchased three steps. Hence, the bond's combined yield is the average of all the steps' yield purchased ([7.5% + 6.75% + 6%] / 3 ➔ BondYield = 6.75%).
 - When an updated demand for liquidity is calculated by the insurance pool (new value for WC<sub>Delta</sub> and WC<sub>Bond</sub>), the escalator gets a reset with WC<sub>Bond</sub> steps being redistributed evenly from the last **Yield** value (before the reset) to a yield of zero. If WC<sub>Bond</sub> is zero or negative, no steps are available for purchase from the escalator.
  Such a reset is illustrated in Figure 4 with a new WC<sub>Bond</sub> of 12, a **Yield** of 5.25% (equals **Yield** before the reset), and the steps being redistributed equally.
 
@@ -296,7 +298,7 @@ The implications in choosing an appropriate value for YAC are as follows:
 
 The relationship between Double Value Time and Turnover Rate, depending on YAC, is shown in the diagram below.
 
-![](RackMultipart20211030-4-10ku6rx_html_c54cd1130b129d38.png)
+<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/YieldAccelerationConstant.png?raw=true" width="600">
 
 To obtain YAC on a per minute basis calculate
 
