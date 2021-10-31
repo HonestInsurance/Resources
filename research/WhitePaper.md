@@ -53,7 +53,7 @@ Some formulas use the expression of '+=' or '-='.
 
 A conceptual overview of the proposed insurance pool model is presented in the diagram below.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/InsuranceModel.png?raw=true" width="600">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/InsuranceModel.png?raw=true" width="800">
 
 **Liquidity Providers** provide funds by purchasing insurance pool bonds and depositing the bond's principal into the insurance pool's **Funding Account**. The Funding Account's balance is used to fund the various insurance pool expenditures such as:
 
@@ -100,7 +100,7 @@ WC<sub>Exp</sub> accounts only for actual costs that are settled from the fundin
 
 Due to sometimes significant time gaps between claim incidents and their settlements, WC<sub>Locked</sub> is used in this model to account for these future liabilities (accrued liabilities are created). The purpose of these accruals is to capture expected future expenditures in a timely fashion, allowing the model to respond more quickly to a changing environment.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img2.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img2.png?raw=true" width="480">
 
 'm' represents the total number of claims for which an accrual has been established. Note: Establishing an accrual for a claim should be considered an exception to the rule and not the default operating procedure, the exception being if:
 
@@ -113,7 +113,7 @@ If an accrual has been established for a claim, this liability will be removed f
 
 A key metric on which the health of the insurance pool can be assessed is the duration in days WC<sub>Bal</sub> is able to cover **anticipated** claim payments without having any additional contributions made to it. This metric is called Working Capital Time (WC<sub>Time</sub>) and can be calculated as follows:
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img3.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img3.png?raw=true" width="370">
 
 Since WC<sub>Locked</sub> is included in this formula, WC<sub>Time</sub> can also be a negative value. This would mean that WC<sub>Bal</sub> is insufficient to cover the anticipated claims represented by WC<sub>Locked</sub> causing the insurance pool to be in debt. However, the insurance pool remains solvent as long as WC<sub>Bal</sub> is able to fund ongoing WC<sub>Exp</sub>.
 
@@ -138,9 +138,9 @@ From a **quantitative** point of view, the optimum WC<sub>TargetTime</sub> can b
 1. **Interest (CCU<sub>Interest</sub>)** – This represents the expected return for a near risk-free investment (the expected return for providing the capital). A benchmark for this interest rate may be government bonds or the interest on bank cash deposits (i.e. interest on near risk-free investments).
 2. **Risk premium (CCU<sub>Risk</sub>)** represents the return Liquidity Providers demand for accepting risks that are associated with their investment. The **trust in the enduring solvency of the insurance pool** with the qualitative factors outlined earlier (plus those that are missing) may have a significant impact on the risk premiums demanded by the Liquidity Providers.
 
-The diagram below displays the anticipated Risk premium (CCU<sub>Risk</sub>), the Interest(CCU<sub>Interest</sub>) and the Total markup (CCUTotal) as the sum of CCU<sub>Risk</sub> and CCU<sub>Interest</sub> in relation to WC<sub>Time</sub>.
+The diagram below displays the anticipated Risk premium (CCU<sub>Risk</sub>), the Interest(CCU<sub>Interest</sub>) and the Total markup (CCU<sub>Total</sub>) as the sum of CCU<sub>Risk</sub> and CCU<sub>Interest</sub> in relation to WC<sub>Time</sub>.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/CapitalCostPerUnit-of-WorkingCapital.png?raw=true" width="600">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/CapitalCostPerUnit-of-WorkingCapital.png?raw=true" width="700">
 
 The assumption for the CCU<sub>Risk</sub> component is that an increasing WC<sub>Time</sub> also causes WC<sub>Bal</sub> to grow. As a result, it can be assumed that the Liquidity Providers' confidence in the solvency of the pool grows as greater financial strength enables the pool to withstand disruptive events more easily. Due to this perceived lower risk, Liquidity Providers may accept a lower CCU<sub>Risk</sub> in return.
 
@@ -154,38 +154,38 @@ Finally, a very high WC<sub>Time</sub> (and WC<sub>Bal</sub>) may provide Liquid
 
 The Risk premium (CCU<sub>Risk</sub>) in the context of WC<sub>Time</sub> can be calculated as follows:
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img4.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img4.png?raw=true" width="300">
 
 
 The interest component (CCU<sub>Interest</sub>) in relation to WC<sub>Time</sub> is considered to be a linear function in which Liquidity Providers demand a fixed daily return for providing the funds. As a result, CCU<sub>Interest</sub> is the product of the demanded daily return and the duration (WC<sub>Time</sub>):
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img5.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img5.png?raw=true" width="290">
 
-CCUTotal can be calculated as the sum of CCU<sub>Risk</sub> and CCU<sub>Interest</sub>.
+CCU<sub>Total</sub> can be calculated as the sum of CCU<sub>Risk</sub> and CCU<sub>Interest</sub>.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img6.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img6.png?raw=true" width="450">
 
-The ideal WC<sub>TargetTime</sub> can now be calculated by finding a minimum for CCUTotal:
+The ideal WC<sub>TargetTime</sub> can now be calculated by finding a minimum for CCU<sub>Total</sub>:
 
 <img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img7.png?raw=true" width="500">
 
 Mathematically, we can conclude:
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img8.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img8.png?raw=true" width="150">
 
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img9.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img9.png?raw=true" width="300">
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img10.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img10.png?raw=true" width="180">
 
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img11.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img11.png?raw=true" width="320">
 
 ## Demand of Working Capital (WC<sub>Delta</sub>)
 
 In comparing WC<sub>TargetTime</sub> with the current WC<sub>Time</sub>, the demand for additional WC required can be expressed as
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img12.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img12.png?raw=true" width="470">
 
 
 A positive value for WC<sub>Delta</sub> describes the demand for additional liquidity required to match WC<sub>Time</sub> with WC<sub>TargetTime</sub>. A negative value for WC<sub>Delta</sub> indicates that the insurance pool is over funded and no additional liquidity is required at this point in time.
@@ -205,15 +205,15 @@ A Liquidity Provider can be any natural person of eligible age or a legal entity
 
 Due to a delay in a bond being issued and the corresponding principal being credited to the insurance pool's bank account, the variable WC<sub>Transit</sub> is used to capture the sum of all the Bonds' principal in transit.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img1.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img1.png?raw=true" width="460">
 
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img2.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img2.png?raw=true" width="480">
 
 
 When the Liquidity Provider fails to deposit the principal within the **Bond Payment Period** , the Bond contract is voided and the corresponding WC<sub>Transit</sub> is removed as well.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img3.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img3.png?raw=true" width="460">
 
 
 To encourage Liquidity Providers to deposit the principal and fulfil their contractual obligations, Liquidity Providers need to provide a security valued at 10% of the value of the Bond's principal. If a Liquidity Provider fails to deposit the principal, the ownership of the security transfers to the insurance pool. Two options are proposed to provide this security:
@@ -230,7 +230,7 @@ As stated earlier, when the principal does not get credited within the Bond Paym
 
 Taking WC<sub>Transit</sub> into account, the actual demand for new capital (WC<sub>Bond</sub>) to be acquired by the insurance pool through issuing bonds can be calculated as follows:
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img4.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img4.png?raw=true" width="350">
 
 
 In purchasing Bonds, the following bond constraints and clauses apply to Liquidity Providers.
@@ -247,7 +247,7 @@ The maturity of any Bond is a constant and defined by WC<sub>TargetTime</sub>. N
 
 The actual yield Liquidity Providers can expect from a bond (BondYield) is the result of supply and demand market forces. This model proposes a dynamic way of adjusting the **Yield and Gradient** for the bonds on offer. An escalator will be used to illustrate the concept of adjusting the **Yield and Gradient.**!
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/BondYield.png?raw=true" width="600">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/BondYield.png?raw=true" width="700">
 
 The properties of the escalator are:
 
@@ -266,20 +266,20 @@ At periodic intervals, a new demand for WC<sub>Delta</sub> is calculated by the 
 
 - First, a new value for WC<sub>Bond</sub> is calculated by using the previous formula
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img5.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img5.png?raw=true" width="350">
 
 
 - Yield (Yield of the top step) remains at the same value. If no value has been defined in the past, a value of 1% is chosen as its initial value.
 - Finally, the Gradient can be recalculated by
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img6.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img6.png?raw=true" width="260">
 
 
 ## Acceleration of Yield
 
 The **Yield** of the insurance pool **accelerates at a discrete interval of one minute**. However, this increase is executed only if WC<sub>Bond</sub> exceeds a minimum threshold of 10% of WC<sub>Exp</sub>.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img7.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img7.png?raw=true" width="580">
 
 
 The reasoning for this 10% threshold is twofold. First, the resources consumed on a minute-by-minute basis to increase the Yield in comparison to the outstanding WC<sub>Bond</sub> volume may not justify its operations. Second, and more importantly, a small value for WC<sub>Bond</sub> may not make it worthwhile to any Liquidity Provider to purchase a bond with the remaining WC<sub>Bond</sub> as its principal. This would potentially cause the Yield to increase to a very high value. When a reinitialization occurs and a higher WC<sub>Bond</sub> demand is on offer, a significant portion of this WC<sub>Bond</sub> becomes available at an unjustifiably high Yield.
@@ -288,54 +288,54 @@ The implications in choosing an appropriate value for YAC are as follows:
 
 1. **Double Value Time** represents the duration it would take the Yield to increase by a factor of two (i.e. to double in value). Hence, this duration determines the insurance pool's ability to respond to a changing environment in which Liquidity Providers request a higher Yield.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img8.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img8.png?raw=true" width="530">
 
 
 1. **Turnover Rate** refers to the time it would take to sell all the WC<sub>Bond</sub> under the condition that Liquidity Providers' demanded Yield remains constant. This can be perceived as the speed at which WC<sub>Bond</sub> is being 'sold' to Liquidity Providers.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img9.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img9.png?raw=true" width="410">
 
 
 The relationship between Double Value Time and Turnover Rate, depending on YAC, is shown in the diagram below.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/YieldAccelerationConstant.png?raw=true" width="600">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/YieldAccelerationConstant.png?raw=true" width="650">
 
 To obtain YAC on a per minute basis calculate
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img10.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img10.png?raw=true" width="490">
 
 
 ## Issuing of a new Insurance Pool Bond (Bond)
 
 The terms of a newly issued Bond are as follows:
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img11.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img11.png?raw=true" width="750">
 
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img12.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img12.png?raw=true" width="490">
 
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img13.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img13.png?raw=true" width="250">
 
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img14.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img14.png?raw=true" width="540">
 
 
 ## Adjustment of WC<sub>Bond</sub> and Yield
 
 Upon the successful issue of a Bond, WC<sub>Bond</sub> and Yield are adjusted:
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img15.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img15.png?raw=true" width="210">
 
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img16.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img16.png?raw=true" width="300">
 
 
 ## Reimbursement of Liquidity Providers
 
 At the time, a Bond matures, the Bond's principal (BondPrincipal) plus yield (BondYield) are transferred back to the Liquidity Provider.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img17.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img17.png?raw=true" width="580">
 
 ---
 
@@ -347,7 +347,7 @@ Consumers can participate and get insurance coverage by subscribing to the insur
 
 As the policy risk coverage (PolicyRisk) is different from policy to policy, an objective and quantifiable process (or formula) to compare various insurance policies with each other is required. Such a process may differ again from insurance pool to insurance pool and hence needs to be defined in the context of the insurance pool's environment.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img1.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img1.png?raw=true" width="710">
 
 ##### The required function needs to meet the following criteria:
 
@@ -389,14 +389,14 @@ The calculation of the **tomorrow's** premium undergoes the following steps:
 
 The average bond maturity payout in the future is calculated by dividing the total amount of **all maturing bonds in the future** by _Bond __Maturity Duration_. For example a value of 300 for _Bond Payout__ Average per day_ and a value of 90 for _Bond__Maturity Duration_means that over the next 90 days the average value of bonds maturing over the course of a single day is 300.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img2.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img2.png?raw=true" width="680">
 
 1. **Maximum bond payout slope per day**
 
 Since bond maturity payout amounts are most likely distributed unevenly, the model must take that into account by calculating the maximum 'slope' of the cumulated upcoming bond maturity payouts.
  To do that for every day in the future until the BondMaturity Duration has been reached, the model has to ensure that the balance in the Bond Account remains positive by calculating the accumulated future capital demands.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img3.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img3.png?raw=true" width="820">
 
 The **daily demand** in capital to settle all maturing bonds for any given day 'i' in the future is defined as all the sum of bonds that are maturing until that day PLUS a buffer amount that should always be available in the bond account defined as 3 times the Bond PayoutsAverage per day MINUS the current balance of the Bond Account DIVIDED by 'i'.
 
@@ -406,7 +406,7 @@ A value of 700 for _Bond Payout_ _Slope_ _{ 8 }_ therefore means that over the c
 
 The final **target premium** to be charged to all the consumers combined for tomorrow can be calculated by:
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img4.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img4.png?raw=true" width="820">
 
 In this model the consumers are charged the average future cost for the insurance ( Bond PayoutAverage per day) at a minimum. The benefits of charging the average at a minimum premium is that the daily premiums charged over time are more stable as short term fluctuations in maturing bonds are compensated for. During the days when the bond maturity payouts are low the premiums charged are parked in the Bond account and are being consumed during days when bond maturity payouts are high. As a result the model provides a fairer premium model to all consumers independently of when someone joins or leaves the insurance pool.
 
@@ -416,23 +416,23 @@ The reasoning for using a buffer amount of 3 times the average payout amount per
 
 The risk exposure of all insurance pool policies combined can be calculated as the sum of all the individual policies' risk points ('n' representing the number of currently active policies in the pool).
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img5.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img5.png?raw=true" width="430">
 
 1. **Tomorrow's insurance premium (per risk point)**
 
 By dividing the Target Premium for tomorrow by the combined risk of all currently active policies the premium for tomorrow and per risk point gets calculated.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img6.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img6.png?raw=true" width="640">
 
 Consequently a policy's premium for tomorrow is calculated by multiplying the policy's risk [points] with tomorrow's premium per risk point.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img7.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img7.png?raw=true" width="760">
 
 1. **Yesterday's combined insurance premium charged (for all active policies)**
 
 The insurance premium that is charged to all active policies for the day of yesterday is
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img8.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img8.png?raw=true" width="710">
 
 PremiumYesterday is the amount that is consequently transferred as a single payment from the Premium Account into the Bond Account.
 
@@ -440,7 +440,7 @@ PremiumYesterday is the amount that is consequently transferred as a single paym
 
 Overflow payment occur when 'excessive' funds in the Bond Account are debited and credited to the Funding Account. When this occurs the insurance pool becomes partially self-funding by bypassing Liquidity Providers. Overflow payments may occur once a day and the model calculates the amount that might be transferred as
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img9.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img9.png?raw=true" width="820">
 
 If the calculated value of OverflowYesterday is positive, the corresponding amount gets transferred. This model relies on overflow payments especially during periods of growth in order to avoid the unnecessary accumulation of funds in the Bond account. This model puts these funds to 'work' by redirecting them into the Funding pool.
 
@@ -470,7 +470,7 @@ To compensate for life's gray-zones and its ambiguity, a Safety Net Insurance Se
 
 Safety Net Insurance Services should not be confused with an entity that deals with appealed claims in a legal sense. If a Consumer appeals the decision made from a Claim Adjuster, it remains with the Claim Adjuster – and potentially legal assistance – to resolve the dispute.
 
-Safety Net service providers are NOT bound by any rules or guidelines in making their decisions about insurance claims. They are empowered to do what they perceive to be the 'right' thing to do in a given claim. A guiding question that these individuals should ask themselves is: &quot;If a particular case was brought to the attention of every insurance pool Consumer, would the majority of these Consumers deny or acknowledge this claim?&quot; The only boundary that is imposed on them is a cap (e.g. up to 1% of total WC<sub>Exp</sub>) on the total amount they are authorized to use for settling claims that were presented to them.
+Safety Net service providers are NOT bound by any rules or guidelines in making their decisions about insurance claims. They are empowered to do what they perceive to be the 'right' thing to do in a given claim. A guiding question that these individuals should ask themselves is: "If a particular case was brought to the attention of every insurance pool Consumer, would the majority of these Consumers deny or acknowledge this claim" The only boundary that is imposed on them is a cap (e.g. up to 1% of total WC<sub>Exp</sub>) on the total amount they are authorized to use for settling claims that were presented to them.
 
 Another responsibility that falls with this entity is to be the legal representative body and 'owner' of this insurance pool. As the name suggest this entity is set up as a Trust representing the interests of all involved stakeholders in this ecosystem (Consumers, Liquidity Providers, Suppliers, Claim Adjusters and Pool Operators). In addition, this Trust are the rightful owners of the 3 bank accounts required by the pool (Funding Account, Bond Account and Premium Account).
 
@@ -497,7 +497,7 @@ Creating a new insurance pool offers an opportunity to consider and leverage res
 - Dan Ariely's research (5) (9) in the field of behavioral economics might be the single most important research to consider in this context. His research focuses on the irrationality in the decision-making process of humans. Of particular interest are his findings in the field of unethical behavior and the underlying dynamics that influence this behavior.
 - Barry Schwartz (10) and Sheena Iyengar's (11) research on choice and its impact on human decision making is of particular importance in defining insurance services. The central line of argumentation is that some choice is better than none but providing a Consumer with too much choice causes them to feel overwhelmed and somewhat paralyzed in making decisions.
 - James Surowiecki's publication on 'The Wisdom of Crowds' (12) gives profound insight into the combined decision-making power of crowds provided the necessary preconditions are met.
-- Nobel laureate Daniel Kahneman's prospect theory (13) makes an argument to take human's cognitive biases into account. An important example of a cognitive bias to consider is loss-aversion – &quot;they are more likely to act to avert a loss than to achieve a gain&quot; (14).
+- Nobel laureate Daniel Kahneman's prospect theory (13) makes an argument to take human's cognitive biases into account. An important example of a cognitive bias to consider is loss-aversion – "they are more likely to act to avert a loss than to achieve a gain" (14).
 
 ---
 
