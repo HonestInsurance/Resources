@@ -109,8 +109,7 @@ If an accrual has been established for a claim, this liability will be removed f
 
 A key metric on which the health of the insurance pool can be assessed is the duration in days WC<sub>Bal</sub> is able to cover **anticipated** claim payments without having any additional contributions made to it. This metric is called Working Capital Time (WC<sub>Time</sub>) and can be calculated as follows:
 
-######
-
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch2-img3.png?raw=true" width="500">
 
 Since WC<sub>Locked</sub> is included in this formula, WC<sub>Time</sub> can also be a negative value. This would mean that WC<sub>Bal</sub> is insufficient to cover the anticipated claims represented by WC<sub>Locked</sub> causing the insurance pool to be in debt. However, the insurance pool remains solvent as long as WC<sub>Bal</sub> is able to fund ongoing WC<sub>Exp</sub>.
 
@@ -152,23 +151,20 @@ Finally, a very high WC<sub>Time</sub> (and WC<sub>Bal</sub>) may provide Liquid
 
 The Risk premium (CCU<sub>Risk</sub>) in the context of WC<sub>Time</sub> can be calculated as follows:
 
-######
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch2-img4.png?raw=true" width="500">
 
 
 The interest component (CCU<sub>Interest</sub>) in relation to WC<sub>Time</sub> is considered to be a linear function in which Liquidity Providers demand a fixed daily return for providing the funds. As a result, CCU<sub>Interest</sub> is the product of the demanded daily return and the duration (WC<sub>Time</sub>):
 
-######
-
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch2-img5.png?raw=true" width="500">
 
 CCUTotal can be calculated as the sum of CCU<sub>Risk</sub> and CCU<sub>Interest</sub>.
 
-######
-
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch2-img6.png?raw=true" width="500">
 
 The ideal WC<sub>TargetTime</sub> can now be calculated by finding a minimum for CCUTotal:
 
-######
-
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch2-img7.png?raw=true" width="500">
 
 Mathematically, we can conclude:
 
