@@ -391,7 +391,7 @@ The average bond maturity payout in the future is calculated by dividing the tot
 
 <img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img2.png?raw=true" width="680">
 
-1. **Maximum bond payout slope per day**
+2. **Maximum bond payout slope per day**
 
 Since bond maturity payout amounts are most likely distributed unevenly, the model must take that into account by calculating the maximum 'slope' of the cumulated upcoming bond maturity payouts.
  To do that for every day in the future until the BondMaturity Duration has been reached, the model has to ensure that the balance in the Bond Account remains positive by calculating the accumulated future capital demands.
@@ -402,7 +402,7 @@ The **daily demand** in capital to settle all maturing bonds for any given day '
 
 A value of 700 for _Bond Payout_ _Slope_ _{ 8 }_ therefore means that over the course of the next 8 days a minimum of 700 per day has to be charged to ensure **appropriate solvency** of the Bond Account while also accounting for the current balance of the Bond Account.
 
-1. **Insurance Pool's premium target for tomorrow**
+3. **Insurance Pool's premium target for tomorrow**
 
 The final **target premium** to be charged to all the consumers combined for tomorrow can be calculated by:
 
@@ -412,13 +412,13 @@ In this model the consumers are charged the average future cost for the insuranc
 
 The reasoning for using a buffer amount of 3 times the average payout amount per day is that as the name _Target Premium__Tomorrow_ suggests this is only a target premium the model is aiming for using the information that is available at a given point in time and is not guaranteed to be able to actually collect. The exact premium to be charged will only be known 24 hours later. To account for this inaccuracy a buffer of 3x suffices as compensation.
 
-1. **Cumulative risk of all active policies within the pool**
+4. **Cumulative risk of all active policies within the pool**
 
 The risk exposure of all insurance pool policies combined can be calculated as the sum of all the individual policies' risk points ('n' representing the number of currently active policies in the pool).
 
 <img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img5.png?raw=true" width="430">
 
-1. **Tomorrow's insurance premium (per risk point)**
+5. **Tomorrow's insurance premium (per risk point)**
 
 By dividing the Target Premium for tomorrow by the combined risk of all currently active policies the premium for tomorrow and per risk point gets calculated.
 
@@ -428,7 +428,7 @@ Consequently a policy's premium for tomorrow is calculated by multiplying the po
 
 <img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img7.png?raw=true" width="760">
 
-1. **Yesterday's combined insurance premium charged (for all active policies)**
+6. **Yesterday's combined insurance premium charged (for all active policies)**
 
 The insurance premium that is charged to all active policies for the day of yesterday is
 
@@ -436,7 +436,7 @@ The insurance premium that is charged to all active policies for the day of yest
 
 PremiumYesterday is the amount that is consequently transferred as a single payment from the Premium Account into the Bond Account.
 
-1. **Overflow payments**
+7. **Overflow payments**
 
 Overflow payment occur when 'excessive' funds in the Bond Account are debited and credited to the Funding Account. When this occurs the insurance pool becomes partially self-funding by bypassing Liquidity Providers. Overflow payments may occur once a day and the model calculates the amount that might be transferred as
 
