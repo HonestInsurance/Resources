@@ -137,7 +137,7 @@ From a **quantitative** point of view, the optimum WC<sub>TargetTime</sub> can b
 
 The diagram below displays the anticipated Risk premium (CCU<sub>Risk</sub>), the Interest(CCU<sub>Interest</sub>) and the Total markup (CCUTotal) as the sum of CCU<sub>Risk</sub> and CCU<sub>Interest</sub> in relation to WC<sub>Time</sub>.
 
-![](RackMultipart20211030-4-10ku6rx_html_2da42f2f1747e143.png)
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/diagrams/CaptialCostPerUnit-of-WorkingCaptial.png" width="800">
 
 The assumption for the CCU<sub>Risk</sub> component is that an increasing WC<sub>Time</sub> also causes WC<sub>Bal</sub> to grow. As a result, it can be assumed that the Liquidity Providers' confidence in the solvency of the pool grows as greater financial strength enables the pool to withstand disruptive events more easily. Due to this perceived lower risk, Liquidity Providers may accept a lower CCU<sub>Risk</sub> in return.
 
