@@ -40,12 +40,12 @@ This paper proposes an alternative model of insurance that addresses the issues 
 
 A list of abbreviations and acronyms used in this paper is presented at the end. Formulas outlined in this paper use the structure as shown below. The information presented within cornered brackets [ ] shows the unit (e.g. days, hours, minutes, points, %, Currency, etc.)
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch1-img1.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch1-img1.png?raw=true" width="500" style="padding:30px; padding-left:50px">
 
 Some formulas use the expression of '+=' or '-='.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch1-img2.png?raw=true" width="700">
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch1-img3.png?raw=true" width="700">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch1-img2.png?raw=true" width="700" style="padding:30px; padding-left:50px">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch1-img3.png?raw=true" width="700" style="padding:30px; padding-left:50px">
 
 ---
 
@@ -53,7 +53,7 @@ Some formulas use the expression of '+=' or '-='.
 
 A conceptual overview of the proposed insurance pool model is presented in the diagram below.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/InsuranceModel.png?raw=true" width="800">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/InsuranceModel.png?raw=true" width="800" style="padding:30px; padding-left:50px">
 
 **Liquidity Providers** provide funds by purchasing insurance pool bonds and depositing the bond's principal into the insurance pool's **Funding Account**. The Funding Account's balance is used to fund the various insurance pool expenditures such as:
 
@@ -85,7 +85,7 @@ WC<sub>Bal</sub> refers to the account balance of Funding Account at any given p
 
 The proposed model utilizes historic expenses to make a prediction about the insurance pool's 'near' future expenses. These historical **daily expenses** of running the insurance pool can be calculated with 'n' being the number of days in the past that are considered.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img1.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img1.png?raw=true" width="500" style="padding:30px; padding-left:50px">
 
 In selecting an appropriate value for 'n' two aspects must be considered:
 
@@ -100,7 +100,7 @@ WC<sub>Exp</sub> accounts only for actual costs that are settled from the fundin
 
 Due to sometimes significant time gaps between claim incidents and their settlements, WC<sub>Locked</sub> is used in this model to account for these future liabilities (accrued liabilities are created). The purpose of these accruals is to capture expected future expenditures in a timely fashion, allowing the model to respond more quickly to a changing environment.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img2.png?raw=true" width="480">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img2.png?raw=true" width="480" style="padding:30px; padding-left:50px">
 
 'm' represents the total number of claims for which an accrual has been established. Note: Establishing an accrual for a claim should be considered an exception to the rule and not the default operating procedure, the exception being if:
 
@@ -113,7 +113,7 @@ If an accrual has been established for a claim, this liability will be removed f
 
 A key metric on which the health of the insurance pool can be assessed is the duration in days WC<sub>Bal</sub> is able to cover **anticipated** claim payments without having any additional contributions made to it. This metric is called Working Capital Time (WC<sub>Time</sub>) and can be calculated as follows:
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img3.png?raw=true" width="370">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img3.png?raw=true" width="370" style="padding:30px; padding-left:50px">
 
 Since WC<sub>Locked</sub> is included in this formula, WC<sub>Time</sub> can also be a negative value. This would mean that WC<sub>Bal</sub> is insufficient to cover the anticipated claims represented by WC<sub>Locked</sub> causing the insurance pool to be in debt. However, the insurance pool remains solvent as long as WC<sub>Bal</sub> is able to fund ongoing WC<sub>Exp</sub>.
 
@@ -140,7 +140,7 @@ From a **quantitative** point of view, the optimum WC<sub>TargetTime</sub> can b
 
 The diagram below displays the anticipated Risk premium (CCU<sub>Risk</sub>), the Interest(CCU<sub>Interest</sub>) and the Total markup (CCU<sub>Total</sub>) as the sum of CCU<sub>Risk</sub> and CCU<sub>Interest</sub> in relation to WC<sub>Time</sub>.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/CapitalCostPerUnit-of-WorkingCapital.png?raw=true" width="700">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/CapitalCostPerUnit-of-WorkingCapital.png?raw=true" width="700" style="padding:30px; padding-left:50px">
 
 The assumption for the CCU<sub>Risk</sub> component is that an increasing WC<sub>Time</sub> also causes WC<sub>Bal</sub> to grow. As a result, it can be assumed that the Liquidity Providers' confidence in the solvency of the pool grows as greater financial strength enables the pool to withstand disruptive events more easily. Due to this perceived lower risk, Liquidity Providers may accept a lower CCU<sub>Risk</sub> in return.
 
@@ -154,39 +154,36 @@ Finally, a very high WC<sub>Time</sub> (and WC<sub>Bal</sub>) may provide Liquid
 
 The Risk premium (CCU<sub>Risk</sub>) in the context of WC<sub>Time</sub> can be calculated as follows:
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img4.png?raw=true" width="300">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img4.png?raw=true" width="300" style="padding:30px; padding-left:50px">
 
 
 The interest component (CCU<sub>Interest</sub>) in relation to WC<sub>Time</sub> is considered to be a linear function in which Liquidity Providers demand a fixed daily return for providing the funds. As a result, CCU<sub>Interest</sub> is the product of the demanded daily return and the duration (WC<sub>Time</sub>):
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img5.png?raw=true" width="290">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img5.png?raw=true" width="290" style="padding:30px; padding-left:50px">
 
 CCU<sub>Total</sub> can be calculated as the sum of CCU<sub>Risk</sub> and CCU<sub>Interest</sub>.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img6.png?raw=true" width="450">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img6.png?raw=true" width="450" style="padding:30px; padding-left:50px">
 
 The ideal WC<sub>TargetTime</sub> can now be calculated by finding a minimum for CCU<sub>Total</sub>:
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img7.png?raw=true" width="500">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img7.png?raw=true" width="500" style="padding:30px; padding-left:50px">
 
 Mathematically, we can conclude:
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img8.png?raw=true" width="150">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img8.png?raw=true" width="120" style="padding:20px; padding-left:50px"> </break>
 
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img9.png?raw=true" width="300" style="padding:30px; padding-left:50px"> </break>
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img9.png?raw=true" width="300">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img10.png?raw=true" width="180" style="padding:30px; padding-left:50px"> </break>
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img10.png?raw=true" width="180">
-
-
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img11.png?raw=true" width="320">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img11.png?raw=true" width="320" style="padding:30px; padding-left:50px">
 
 ## Demand of Working Capital (WC<sub>Delta</sub>)
 
 In comparing WC<sub>TargetTime</sub> with the current WC<sub>Time</sub>, the demand for additional WC required can be expressed as
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img12.png?raw=true" width="470">
-
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch3-img12.png?raw=true" width="470" style="padding:30px; padding-left:50px">
 
 A positive value for WC<sub>Delta</sub> describes the demand for additional liquidity required to match WC<sub>Time</sub> with WC<sub>TargetTime</sub>. A negative value for WC<sub>Delta</sub> indicates that the insurance pool is over funded and no additional liquidity is required at this point in time.
 
@@ -205,15 +202,14 @@ A Liquidity Provider can be any natural person of eligible age or a legal entity
 
 Due to a delay in a bond being issued and the corresponding principal being credited to the insurance pool's bank account, the variable WC<sub>Transit</sub> is used to capture the sum of all the Bonds' principal in transit.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img1.png?raw=true" width="460">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img1.png?raw=true" width="460" style="padding:30px; padding-left:50px"> </break>
 
-
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img2.png?raw=true" width="480">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img2.png?raw=true" width="480" style="padding:30px; padding-left:50px">
 
 
 When the Liquidity Provider fails to deposit the principal within the **Bond Payment Period** , the Bond contract is voided and the corresponding WC<sub>Transit</sub> is removed as well.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img3.png?raw=true" width="460">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img3.png?raw=true" width="460" style="padding:30px; padding-left:50px">
 
 
 To encourage Liquidity Providers to deposit the principal and fulfil their contractual obligations, Liquidity Providers need to provide a security valued at 10% of the value of the Bond's principal. If a Liquidity Provider fails to deposit the principal, the ownership of the security transfers to the insurance pool. Two options are proposed to provide this security:
@@ -347,7 +343,7 @@ Consumers can participate and get insurance coverage by subscribing to the insur
 
 As the policy risk coverage (PolicyRisk) is different from policy to policy, an objective and quantifiable process (or formula) to compare various insurance policies with each other is required. Such a process may differ again from insurance pool to insurance pool and hence needs to be defined in the context of the insurance pool's environment.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img1.png?raw=true" width="800" style="padding:20px">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img1.png?raw=true" width="800" style="padding:30px; padding-left:50px">
 
 ### The required function needs to meet the following criteria:
 
