@@ -293,7 +293,7 @@ The implications in choosing an appropriate value for YAC are as follows:
 
 The relationship between Double Value Time and Turnover Rate, depending on YAC, is shown in the diagram below.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/YieldAccelerationConstant.png?raw=true" width="650" style="padding:30px; padding-left:50px">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/YieldAccelerationConstant.png?raw=true" width="700" style="padding:30px; padding-left:50px">
 
 To obtain YAC on a per minute basis calculate
 
