@@ -226,7 +226,7 @@ As stated earlier, when the principal does not get credited within the Bond Paym
 
 Taking WC<sub>Transit</sub> into account, the actual demand for new capital (WC<sub>Bond</sub>) to be acquired by the insurance pool through issuing bonds can be calculated as follows:
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img4.png?raw=true" width="350">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img4.png?raw=true" width="350" style="padding:30px; padding-left:50px">
 
 
 In purchasing Bonds, the following bond constraints and clauses apply to Liquidity Providers.
@@ -243,7 +243,7 @@ The maturity of any Bond is a constant and defined by WC<sub>TargetTime</sub>. N
 
 The actual yield Liquidity Providers can expect from a bond (BondYield) is the result of supply and demand market forces. This model proposes a dynamic way of adjusting the **Yield and Gradient** for the bonds on offer. An escalator will be used to illustrate the concept of adjusting the **Yield and Gradient.**!
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/BondYield.png?raw=true" width="700">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/BondYield.png?raw=true" width="700" style="padding:30px; padding-left:50px">
 
 The properties of the escalator are:
 
@@ -262,20 +262,20 @@ At periodic intervals, a new demand for WC<sub>Delta</sub> is calculated by the 
 
 - First, a new value for WC<sub>Bond</sub> is calculated by using the previous formula
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img5.png?raw=true" width="350">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img5.png?raw=true" width="350" style="padding:30px; padding-left:50px">
 
 
 - Yield (Yield of the top step) remains at the same value. If no value has been defined in the past, a value of 1% is chosen as its initial value.
 - Finally, the Gradient can be recalculated by
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img6.png?raw=true" width="260">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img6.png?raw=true" width="260" style="padding:30px; padding-left:50px">
 
 
 ## Acceleration of Yield
 
 The **Yield** of the insurance pool **accelerates at a discrete interval of one minute**. However, this increase is executed only if WC<sub>Bond</sub> exceeds a minimum threshold of 10% of WC<sub>Exp</sub>.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img7.png?raw=true" width="580">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img7.png?raw=true" width="580" style="padding:30px; padding-left:50px">
 
 
 The reasoning for this 10% threshold is twofold. First, the resources consumed on a minute-by-minute basis to increase the Yield in comparison to the outstanding WC<sub>Bond</sub> volume may not justify its operations. Second, and more importantly, a small value for WC<sub>Bond</sub> may not make it worthwhile to any Liquidity Provider to purchase a bond with the remaining WC<sub>Bond</sub> as its principal. This would potentially cause the Yield to increase to a very high value. When a reinitialization occurs and a higher WC<sub>Bond</sub> demand is on offer, a significant portion of this WC<sub>Bond</sub> becomes available at an unjustifiably high Yield.
@@ -284,54 +284,48 @@ The implications in choosing an appropriate value for YAC are as follows:
 
 1. **Double Value Time** represents the duration it would take the Yield to increase by a factor of two (i.e. to double in value). Hence, this duration determines the insurance pool's ability to respond to a changing environment in which Liquidity Providers request a higher Yield.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img8.png?raw=true" width="530">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img8.png?raw=true" width="530" style="padding:30px; padding-left:50px">
 
 
 1. **Turnover Rate** refers to the time it would take to sell all the WC<sub>Bond</sub> under the condition that Liquidity Providers' demanded Yield remains constant. This can be perceived as the speed at which WC<sub>Bond</sub> is being 'sold' to Liquidity Providers.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img9.png?raw=true" width="410">
-
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img9.png?raw=true" width="410" style="padding:30px; padding-left:50px">
 
 The relationship between Double Value Time and Turnover Rate, depending on YAC, is shown in the diagram below.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/YieldAccelerationConstant.png?raw=true" width="650">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/diagrams/YieldAccelerationConstant.png?raw=true" width="650" style="padding:30px; padding-left:50px">
 
 To obtain YAC on a per minute basis calculate
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img10.png?raw=true" width="490">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img10.png?raw=true" width="490" style="padding:30px; padding-left:50px">
 
 
 ## Issuing of a new Insurance Pool Bond (Bond)
 
 The terms of a newly issued Bond are as follows:
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img11.png?raw=true" width="750">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img11.png?raw=true" width="750" style="padding:30px; padding-left:50px"> </break>
 
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img12.png?raw=true" width="490" style="padding:30px; padding-left:50px"> </break>
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img12.png?raw=true" width="490">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img13.png?raw=true" width="250" style="padding:30px; padding-left:50px"> </break>
 
-
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img13.png?raw=true" width="250">
-
-
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img14.png?raw=true" width="540">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img14.png?raw=true" width="540" style="padding:30px; padding-left:50px">
 
 
 ## Adjustment of WC<sub>Bond</sub> and Yield
 
 Upon the successful issue of a Bond, WC<sub>Bond</sub> and Yield are adjusted:
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img15.png?raw=true" width="210">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img15.png?raw=true" width="210" style="padding:30px; padding-left:50px"> </break>
 
-
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img16.png?raw=true" width="300">
-
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img16.png?raw=true" width="300" style="padding:30px; padding-left:50px">
 
 ## Reimbursement of Liquidity Providers
 
 At the time, a Bond matures, the Bond's principal (BondPrincipal) plus yield (BondYield) are transferred back to the Liquidity Provider.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img17.png?raw=true" width="570" style="padding-left:40px">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch4-img17.png?raw=true" width="570" style="padding:30px; padding-left:50px">
 
 ---
 
@@ -385,14 +379,14 @@ The calculation of the **tomorrow's** premium undergoes the following steps:
 
 The average bond maturity payout in the future is calculated by dividing the total amount of **all maturing bonds in the future** by _Bond __Maturity Duration_. For example a value of 300 for _Bond Payout__ Average per day_ and a value of 90 for _Bond__Maturity Duration_means that over the next 90 days the average value of bonds maturing over the course of a single day is 300.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img2.png?raw=true" width="680">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img2.png?raw=true" width="680" style="padding:30px; padding-left:50px">
 
 2. **Maximum bond payout slope per day**
 
 Since bond maturity payout amounts are most likely distributed unevenly, the model must take that into account by calculating the maximum 'slope' of the cumulated upcoming bond maturity payouts.
  To do that for every day in the future until the BondMaturity Duration has been reached, the model has to ensure that the balance in the Bond Account remains positive by calculating the accumulated future capital demands.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img3.png?raw=true" width="820">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img3.png?raw=true" width="820" style="padding:30px; padding-left:50px">
 
 The **daily demand** in capital to settle all maturing bonds for any given day 'i' in the future is defined as all the sum of bonds that are maturing until that day PLUS a buffer amount that should always be available in the bond account defined as 3 times the Bond PayoutsAverage per day MINUS the current balance of the Bond Account DIVIDED by 'i'.
 
@@ -402,7 +396,7 @@ A value of 700 for _Bond Payout_ _Slope_ _{ 8 }_ therefore means that over the c
 
 The final **target premium** to be charged to all the consumers combined for tomorrow can be calculated by:
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img4.png?raw=true" width="820">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img4.png?raw=true" width="820" style="padding:30px; padding-left:50px">
 
 In this model the consumers are charged the average future cost for the insurance ( Bond PayoutAverage per day) at a minimum. The benefits of charging the average at a minimum premium is that the daily premiums charged over time are more stable as short term fluctuations in maturing bonds are compensated for. During the days when the bond maturity payouts are low the premiums charged are parked in the Bond account and are being consumed during days when bond maturity payouts are high. As a result the model provides a fairer premium model to all consumers independently of when someone joins or leaves the insurance pool.
 
@@ -412,23 +406,23 @@ The reasoning for using a buffer amount of 3 times the average payout amount per
 
 The risk exposure of all insurance pool policies combined can be calculated as the sum of all the individual policies' risk points ('n' representing the number of currently active policies in the pool).
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img5.png?raw=true" width="430">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img5.png?raw=true" width="430" style="padding:30px; padding-left:50px">
 
 5. **Tomorrow's insurance premium (per risk point)**
 
 By dividing the Target Premium for tomorrow by the combined risk of all currently active policies the premium for tomorrow and per risk point gets calculated.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img6.png?raw=true" width="640">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img6.png?raw=true" width="640" style="padding:30px; padding-left:50px">
 
 Consequently a policy's premium for tomorrow is calculated by multiplying the policy's risk [points] with tomorrow's premium per risk point.
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img7.png?raw=true" width="760">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img7.png?raw=true" width="760" style="padding:30px; padding-left:50px">
 
 6. **Yesterday's combined insurance premium charged (for all active policies)**
 
 The insurance premium that is charged to all active policies for the day of yesterday is
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img8.png?raw=true" width="710">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img8.png?raw=true" width="710" style="padding:30px; padding-left:50px">
 
 PremiumYesterday is the amount that is consequently transferred as a single payment from the Premium Account into the Bond Account.
 
@@ -436,7 +430,7 @@ PremiumYesterday is the amount that is consequently transferred as a single paym
 
 Overflow payment occur when 'excessive' funds in the Bond Account are debited and credited to the Funding Account. When this occurs the insurance pool becomes partially self-funding by bypassing Liquidity Providers. Overflow payments may occur once a day and the model calculates the amount that might be transferred as
 
-<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img9.png?raw=true" width="820">
+<img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img9.png?raw=true" width="820" style="padding:30px; padding-left:50px">
 
 If the calculated value of OverflowYesterday is positive, the corresponding amount gets transferred. This model relies on overflow payments especially during periods of growth in order to avoid the unnecessary accumulation of funds in the Bond account. This model puts these funds to 'work' by redirecting them into the Funding pool.
 
