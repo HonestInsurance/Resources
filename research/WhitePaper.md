@@ -387,28 +387,28 @@ Further considerations in choosing the boundaries of what can get coverage and w
 
 Consumers are charged their policies subscription fee to compensate Liquidity Providers for providing liquidity by purchasing bonds. The following steps are proposed to determine the fee that is charged to every insurance consumer.
 
-For the purpose of the calculations below the variable BondPayout Amounts is used as an array containing the future bond maturity payouts for each day. For example the value stored at BondPayout Amounts {1} describes the bond maturity amount of **all bonds** that are maturing on the day of 1 day into the future (tomorrow).
+For the purpose of the calculations below the variable Bond<sub>Payout Amounts</sub> is used as an array containing the future bond maturity payouts for each day. For example the value stored at Bond<sub>Payout Amounts</sub> {1} describes the bond maturity amount of **all bonds** that are maturing on the day of 1 day into the future (tomorrow).
 
-These calculations are executed 'between' the days (at midnight) and the term _ **tomorrow** _ refers to the day that is about to start while _ **yesterday** _ refers to the day that has just ended.
+These calculations are executed 'between' the days (at midnight) and the term **tomorrow** refers to the day that is about to start while **yesterday** refers to the day that has just ended.
 
 The calculation of the **tomorrow's** premium undergoes the following steps:
 
 1. **Average bond maturity payout amounts per day**
 
-The average bond maturity payout in the future is calculated by dividing the total amount of **all maturing bonds in the future** by _Bond __Maturity Duration_. For example a value of 300 for _Bond Payout__ Average per day_ and a value of 90 for _Bond__Maturity Duration_means that over the next 90 days the average value of bonds maturing over the course of a single day is 300.
+The average bond maturity payout in the future is calculated by dividing the total amount of **all maturing bonds in the future** by Bond<sub>Maturity Duration</sub>. For example a value of 300 for Bond<sub>Payout Average per day</sub> and a value of 90 for Bond<sub>Maturity Duration</sub> means that over the next 90 days the average value of bonds maturing over the course of a single day is 300.
 
 <img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img2.png?raw=true" width="730" style="padding:30px; padding-left:50px">
 
 2. **Maximum bond payout slope per day**
 
 Since bond maturity payout amounts are most likely distributed unevenly, the model must take that into account by calculating the maximum 'slope' of the cumulated upcoming bond maturity payouts.
- To do that for every day in the future until the BondMaturity Duration has been reached, the model has to ensure that the balance in the Bond Account remains positive by calculating the accumulated future capital demands.
+ To do that for every day in the future until the Bond<sub>Maturity Duration</sub> has been reached, the model has to ensure that the balance in the Bond Account remains positive by calculating the accumulated future capital demands.
 
 <img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img3.png?raw=true" width="888" style="padding:30px; padding-left:50px">
 
-The **daily demand** in capital to settle all maturing bonds for any given day 'i' in the future is defined as all the sum of bonds that are maturing until that day PLUS a buffer amount that should always be available in the bond account defined as 3 times the Bond PayoutsAverage per day MINUS the current balance of the Bond Account DIVIDED by 'i'.
+The **daily demand** in capital to settle all maturing bonds for any given day 'i' in the future is defined as all the sum of bonds that are maturing until that day PLUS a buffer amount that should always be available in the bond account defined as 3 times the Bond Payouts<sub>Average per day</sub> MINUS the current balance of the Bond Account DIVIDED by 'i'.
 
-A value of 700 for _Bond Payout_ _Slope_ _{ 8 }_ therefore means that over the course of the next 8 days a minimum of 700 per day has to be charged to ensure **appropriate solvency** of the Bond Account while also accounting for the current balance of the Bond Account.
+A value of 700 for _Bond Payout<sub>Slope</sub> { 8 }_ therefore means that over the course of the next 8 days a minimum of 700 per day has to be charged to ensure **appropriate solvency** of the Bond Account while also accounting for the current balance of the Bond Account.
 
 3. **Insurance Pool's premium target for tomorrow**
 
@@ -416,9 +416,9 @@ The final **target premium** to be charged to all the consumers combined for tom
 
 <img src="https://github.com/HonestInsurance/Resources/blob/master/research/formulas/ch5-img4.png?raw=true" width="862" style="padding:30px; padding-left:50px">
 
-In this model the consumers are charged the average future cost for the insurance ( Bond PayoutAverage per day) at a minimum. The benefits of charging the average at a minimum premium is that the daily premiums charged over time are more stable as short term fluctuations in maturing bonds are compensated for. During the days when the bond maturity payouts are low the premiums charged are parked in the Bond account and are being consumed during days when bond maturity payouts are high. As a result the model provides a fairer premium model to all consumers independently of when someone joins or leaves the insurance pool.
+In this model the consumers are charged the average future cost for the insurance ( Bond Payout<sub> Average per day</sub>) at a minimum. The benefits of charging the average at a minimum premium is that the daily premiums charged over time are more stable as short term fluctuations in maturing bonds are compensated for. During the days when the bond maturity payouts are low the premiums charged are parked in the Bond account and are being consumed during days when bond maturity payouts are high. As a result the model provides a fairer premium model to all consumers independently of when someone joins or leaves the insurance pool.
 
-The reasoning for using a buffer amount of 3 times the average payout amount per day is that as the name _Target Premium__Tomorrow_ suggests this is only a target premium the model is aiming for using the information that is available at a given point in time and is not guaranteed to be able to actually collect. The exact premium to be charged will only be known 24 hours later. To account for this inaccuracy a buffer of 3x suffices as compensation.
+The reasoning for using a buffer amount of 3 times the average payout amount per day is that as the name _Target Premium <sub>Tomorrow</sub>_ suggests this is only a target premium the model is aiming for using the information that is available at a given point in time and is not guaranteed to be able to actually collect. The exact premium to be charged will only be known 24 hours later. To account for this inaccuracy a buffer of 3x suffices as compensation.
 
 4. **Cumulative risk of all active policies within the pool**
 
@@ -523,32 +523,32 @@ Lastly, the insurance value proposition (value for money) should increase drasti
 
 # Acronyms
 
-**Currency Unit**** [cu]** The smallest denomination of the currency used for the insurance pool
+**Currency Unit[cu]** The smallest denomination of the currency used for the insurance pool
  (Dollar Cent, Euro Cent, BTC Satoshi)
 
 **Accounts [cu]** The insurance pools' accounts that hold currency. The pool requires the following accounts: _Funding Account, Premium Account and Bond Account._
 
 **WC [cu]** Stands for Working Capital and refers to the monetary assets or obligations of the insurance pool.
 
-**WC**** Bal **** [cu]** The balance of the WC in the account.
+**WC<sub>Bal</sub> [cu]** The balance of the WC in the account.
 
-**WC**** Locked **** [cu]** Working Capital that is reserved to be used for locked but not assessed and settled claims.
+**WC<sub>Locked</sub> [cu]** Working Capital that is reserved to be used for locked but not assessed and settled claims.
 
-**WC**** Exp **** [cu****/ day]** The anticipated expenses of running the insurance pool per day.
+**WC<sub>Exp</sub> [cu/ day]** The anticipated expenses of running the insurance pool per day.
 
-**WC**** Time **** [day]** The duration WC<sub>Bal</sub> is sufficient to cover anticipated claim payments without being topped up. This value can be negative!
+**WC<sub>Time</sub> [day]** The duration WC<sub>Bal</sub> is sufficient to cover anticipated claim payments without being topped up. This value can be negative!
 
-**WC**** Delta **** [cu]** The delta demand to top up WC<sub>Bal</sub> to reach the desired WC<sub>Time</sub>
+**WC<sub>Delta</sub> [cu]** The delta demand to top up WC<sub>Bal</sub> to reach the desired WC<sub>Time</sub>
 
-**WC**** Bond **** [cu]** The volume of units on offer to be issued as bonds to Liquidity Providers.
+**WC<sub>Bond</sub> [cu]** The volume of units on offer to be issued as bonds to Liquidity Providers.
 
-**WC**** Transit **** [cu]** The volume of units that are issued as bonds but the bond principal has not yet been credited to the insurance pool's account.
+**WC<sub>Transit</sub> [cu]** The volume of units that are issued as bonds but the bond principal has not yet been credited to the insurance pool's account.
 
-**CCU | CCU**** Total **** [cu****| %]** The Capital Costs per Unit of WC demanded by Liquidity Providers (i.e. the return on investment for Liquidity Providers).
+**CCU | CCUTotal</sub> [cu| %]** The Capital Costs per Unit of WC demanded by Liquidity Providers (i.e. the return on investment for Liquidity Providers).
 
-**CCU**** Risk **** [cu****| %]** The Capital Costs per Unit of WC demanded by Liquidity Providers as compensation for the investment risk.
+**CCU<sub>Risk</sub> [cu| %]** The Capital Costs per Unit of WC demanded by Liquidity Providers as compensation for the investment risk.
 
-**CCU**** Interest **** [cu****| %]** The Capital Costs per Unit of WC demanded by Liquidity Providers as interest compensation.
+**CCU<sub>Interest</sub> [cu| %]** The Capital Costs per Unit of WC demanded by Liquidity Providers as interest compensation.
 
 **Yield [%]** The yield of the highest selling unit of WC<sub>Bond</sub> on offer.
 
@@ -558,11 +558,11 @@ Lastly, the insurance value proposition (value for money) should increase drasti
 
 **Bond [cu]** An Insurance Pool Bond is a means for Liquidity Providers to invest in the insurance pool.
 
-**Bond**** Principal **** [cu]** The Bond's principal.
+**BondPrincipal [cu]** The Bond's principal.
 
-**Bond**** Yield **** [%]** The Bond's yield.
+**BondYield [%]** The Bond's yield.
 
-**Bond**** Maturity **** [day]** The time after which the bond matures in days.
+**BondMaturity [day]** The time after which the bond matures in days.
 
 **Bond Payment Period [hour]** The period in hours within the Bond's principal has to be credited to the insurance pool's bank account.
 
